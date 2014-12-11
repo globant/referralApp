@@ -3,20 +3,18 @@ class App
 {
     public function init()
     {
-        $app = new \Phalcon\Mvc\Micro($this->_setup());
+        $di = $this->_setup();
+        $app = new \Phalcon\Mvc\Micro($di);
 
-        $app->get('/', function() {
-            echo 'Hello world!';
-        });
         $app->notFound(function() {
             echo '404 mon';
         });
 
-        $routes = new \Routes();
-
         // Revisit regexp to avoid dual route
-        $app->get('/pull', array($routes, 'pull'));
-        $app->get('/pull/{id:\d+}', array($routes, 'pull'));
+        $app->get('/pull', array(new \Routes\Base($di), 'pull'));
+        $app->get('/pull/{id:\d+}', array(new \Routes\Base($di), 'pull'));
+        $app->post('/login', array(new \Routes\Login($di), 'login'));
+        $app->post('/login/logout', array(new \Routes\Login($di), 'logout'));
 
         $app->handle();
     }
