@@ -2,3 +2,6 @@
     position: absolute;
     left: -999px;
 }
+#logout-btn {
+    display: none;
+}
