@@ -5,6 +5,16 @@
 
             helper.disconnectServer();
         });
+
+        $('#carousel').carousel({
+            interval: 10000000
+        });
+
+
+
+        $('.switch').on('click',function(){
+            $('#comp').toggle();
+        });
     });
 
     var helper = (function() {
