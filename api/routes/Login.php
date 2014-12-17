@@ -1,6 +1,8 @@
 <?php
 namespace Routes;
 
+use \Models\User;
+
 class Login extends Base
 {
     const CLIENT_ID = '229737568035-t0isieq89rkd65av2uvebo4iu2jrju43.apps.googleusercontent.com';
@@ -35,20 +37,17 @@ class Login extends Base
             }
 
             $this->response->setStatusCode($tokenValidation['status_code'], $tokenValidation['status_message']);
-            $this->response->setJsonContent(
-                array(
-                    'success' => $tokenValidation['success'],
-                    'message' => $tokenValidation['message'],
-                )
+            $response = array(
+                'success' => $tokenValidation['success'],
+                'message' => $tokenValidation['message'],
             );
         } else {
-            $this->response->setJsonContent(
-                array(
-                    'success' => true,
-                    'message' => 'Already connected',
-                )
+            $response = array(
+                'success' => true,
+                'message' => 'Already connected',
             );
         }
+        $this->response->setJsonContent($response);
 
         return $this->response;
     }
@@ -61,35 +60,38 @@ class Login extends Base
             $this->client->revokeToken($token->access_token);
             $this->session->remove('token');
 
-            $this->response->setJsonContent(
-                array(
-                    'reload' => true,
-                )
+            $response = array(
+                'reload' => true,
             );
         } else {
-            $this->response->setJsonContent(
-                array(
-                    'reload' => false,
-                )
+            $response = array(
+                'reload' => false,
             );
         }
+        $this->response->setJsonContent($response);
 
         return $this->response;
 
     }
 
     public function local_login() {
-        $mail = $this->request->getPost('usr_email');
-        $pass = md5($this->request->getPost('pass'));
-        
-        $user = \Models\User::getByEmailPass($mail, $pass);
+        $email = $this->request->getPost('usr_email');
+        $password = md5($this->request->getPost('pass'));
+
+        $user = User::getUserByCredentials($email, $password);
         if (!empty($user)) {
-            $ret = array('success' => true, 'message' => 'Authenticated');
+            $response = array(
+                'success' => true,
+                'message' => 'Authenticated'
+            );
         } else {
-            $ret = array('success' => false, 'message' => 'Invalid username/password');
+            $response = array(
+                'success' => false,
+                'message' => 'Invalid username/password'
+            );
         }
-        $this->response->setJsonContent($ret);
-        
+        $this->response->setJsonContent($response);
+
         return $this->response;
     }
     /**

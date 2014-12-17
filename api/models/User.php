@@ -4,34 +4,41 @@ namespace Models;
 class User extends \Phalcon\Mvc\Model
 {
     /**
-     * @var integer
+     * @Primary
+     * @Identity
+     * @Column(type="integer", length=11, nullable=false)
      */
     public $id;
     /**
-     * @var string
+     * @Column(type="string", length=80, nullable=false)
      */
     public $password;
     /**
-     * @var string
+     * @Column(type="string", length=100, nullable=false)
      */
     public $email;
     /**
-     * @var integer
+     * @Column(type="integer", length=11, nullable=false)
      */
     public $points;
     /**
-     * @var string
+     * @Column(type="string", length=100, nullable=false)
      */
     public $name;
-    
-    public static function getByEmailPass($email, $password) {
+
+    public static function getUserByCredentials($email, $password) {
         $user = User::query()
-                ->addWhere('email = :email:')
-                ->andWhere('password = :password:')
-                ->bind(array('email' => $email, 'password' => $password))
-                ->execute()
-                ->getFirst();
-        
+            ->where('email = :email:')
+            ->andWhere('password = :password:')
+            ->bind(
+                array(
+                    'email' => $email,
+                    'password' => $password
+                )
+            )
+            ->execute()
+            ->getFirst();
+
         return $user;
     }
 }
