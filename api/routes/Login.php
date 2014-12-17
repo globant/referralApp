@@ -78,6 +78,20 @@ class Login extends Base
 
     }
 
+    public function local_login() {
+        $mail = $this->request->getPost('usr_email');
+        $pass = md5($this->request->getPost('pass'));
+        
+        $user = \Models\User::getByEmailPass($mail, $pass);
+        if (!empty($user)) {
+            $ret = array('success' => true, 'message' => 'Authenticated');
+        } else {
+            $ret = array('success' => false, 'message' => 'Invalid username/password');
+        }
+        $this->response->setJsonContent($ret);
+        
+        return $this->response;
+    }
     /**
      * Returns false if token is ok
      * @param object $token

@@ -11,6 +11,10 @@
     </head>
     <body>
         <h1>Hello, world!</h1>
+        <div id="local-login-result" ></div>
+        <input type="text" id="usr_email" />
+        <input type="text" id="pass" />
+        <a href="#" id="test-local-login">Test local login.</a>
         <div id="login-btn">
             <span class="g-signin"
                 data-scope="https://www.googleapis.com/auth/plus.login"

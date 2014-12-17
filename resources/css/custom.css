@@ -5,3 +5,23 @@
 #logout-btn {
     display: none;
 }
+
+#test-local-login {
+    display: block;
+    padding: 5px;
+    font-weight: bold;
+    width: 150px;
+    
+}
+
+#local-login-result {
+    font-size: 18px;
+}
+
+.info {
+    color: blue;
+}
+
+.error {
+    color: red;
+}

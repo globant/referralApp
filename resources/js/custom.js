@@ -5,6 +5,10 @@
 
             helper.disconnectServer();
         });
+        
+        $('#test-local-login').click(function() {
+            helper.testLocalLogin();
+        })
     });
 
     var helper = (function() {
@@ -12,6 +16,29 @@
         var $logoutBtn = $('#logout-btn');
 
         return {
+            testLocalLogin: function() {
+               var email = $('#usr_email').val();
+               var pass = $('#pass').val();
+               var result = $('#local-login-result');
+               var parameters = 'usr_email=' + email + '&pass=' + pass;
+                $.ajax({
+                    type: 'POST',
+                    url: '/api/local-login',
+                    dataType: 'json',
+                    success: function(r) {
+                        result.removeClass();
+                        if (r && r.success) {
+                            result.addClass('info');
+                            result.html(r.message);
+                        } else {
+                            result.addClass('error');
+                            result.html('Error');
+                        }
+                        
+                    },
+                    data: parameters,
+                });
+            },
             signInCallback: function(authResult) {
                 if (authResult['access_token']) {
                     this.authResult = authResult;
