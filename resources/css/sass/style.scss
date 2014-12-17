@@ -4,8 +4,8 @@
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
 
 /*@import "compass/reset";*/
-@import "/vendors/css/bootstrap.css";
-@import "/vendors/css/bootstrap-theme.min.css";
+@import "../../vendors/css/bootstrap.css";
+@import "../../vendors/css/bootstrap-theme.min.css";
 @import "resources";
 @import "buttons";
 h1, h2, h3, h4, h5{
@@ -41,37 +41,60 @@ body{
 	}
     .btn {
         font-family: 'DINCond';
+    }    
+    .hot{
+    	position: relative;
     }
 }
 header {
     .logo {
-        margin: 40px 0px;
-        display: block;
-        width: 275px;
+        margin: 40px 0 40px -20px;
+        display: inline-block;
+        width: 240px;
         height: 60px;
-        background-image: url('../img/logo-globant.png');
+        background-image: url('../img/logo-positivo-300.png');
         background-repeat: no-repeat;
         background-size: contain;
+		+ h1 {
+			display: inline-block;
+			font-family: 'DINCond';
+			font-weight: 200;
+			text-transform: none;
+			font-size: 24px;
+			position: relative;
+		    top: -64px;
+		    &:before {
+		    	content: "|";
+				font-size: 24px;
+				margin: 0 16px 0 0;
+				position: relative;
+				top: 0;
+		    }
+		}
     }
     .links {
         list-style-type: none;
-
+		margin: 56px 0 0;
         li {
             display: inline-block;
-
+			margin: 0 0 0 15px;
             a {
                 display: block;
                 padding: 5px 10px;
                 font-size: 17px;
                 font-weight: 200;
                 font-family: 'DIN';
-                text-transform: uppercase;
-                background-color: #ffffff;
-                border-radius: 5px;
-                color: $grey-border;
-
+                text-transform: uppercase;                
+                color: $grey-nav-color;
+                text-decoration: none;
+				&.active {
+					background-color: #ffffff;
+					@include border-radius(5px);					
+				}
                 &:hover {
                     text-decoration: none;
+                    @include border-radius(5px);
+                    background: rgba(255, 255, 255, 0.5);
                 }
             }
         }
@@ -142,10 +165,18 @@ header {
 						font-size: 24px;
                         font-weight: normal;
 						line-height: 23px;
-                        margin: 0px;
+                        margin: 0 0 0 20px;
                         text-transform: uppercase;
+                        &.hot {
+					    	&:before {
+					    		@include hot();
+					    		left: -28px;
+								top: -5px;
+					    	}
+					    }
 					}
 					.location{
+						margin-left: 20px;
 						&:before{
 							content: " ";
 							width: 20px;
@@ -248,8 +279,14 @@ header {
                 td {
                     padding: 10px 20px;
                     font-size: 18px;
-                    border-bottom: 2px solid #d4d3d9;
-
+	                border-bottom: 2px solid #d4d3d9;	                
+					&.hot {
+				    	&:before {
+				    		@include hot();
+				    		top: 12px;
+				    		left: -7px;
+				    	}
+				    }
                     .btn {
                         font-size: 24px;
                         vertical-align: middle;
@@ -282,16 +319,36 @@ header {
 }
 footer {
     padding: 20px 10px;
-    background-color: #e5e3e4;
-
-    .copyright {
-        font-family: Arial;
-        font-size: 23px;
-    }
+    background-color: #d4d3d3;
+    .social {
+	    a {
+	    	display: block;
+	    	width: 40px;
+	    	height: 40px;
+	    	background: url('../img/footersocialsprite.png') no-repeat;
+	    	text-indent: -9999px;
+	    	float: left;
+	    	margin: 0 0 0 15px;
+			&.twitter {
+				background-position: 0 -80px;
+			}
+			&.facebook {
+				background-position: 0 0;
+			}
+			&.linkedin {
+			    background-position: 0 -40px;
+			}
+	    }
+		.copyright {
+	        font-family: 'DIN';
+	        font-size: 23px;
+	        display: inline-block;
+	        width: 200px;
+	        margin: 0 0 0 25px;
+	        line-height: 40px;
+	    }
+	}	   
 }
-
-
-
 div#comp{
 	display: none;
 	opacity: .5;

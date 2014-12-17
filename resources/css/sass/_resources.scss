@@ -8,32 +8,32 @@ $icon-sprite-path: "../img/icon-sprite.png";
 @font-face {
     font-family: 'DINCond';
     font-weight: bold;
-    src: url(/vendors/dincond-bold-opentype.otf);
+    src: url(../../vendors/dincond-bold-opentype.otf);
 }
 @font-face {
     font-family: 'DINCond';
     font-weight: normal;
-    src: url(/vendors/dincond-regular-opentype.otf);
+    src: url(../../vendors/dincond-regular-opentype.otf);
 }
 @font-face {
     font-family: 'DINCond';
     font-weight: 200;
-    src: url(/vendors/dincond-light-opentype.otf);
+    src: url(../../vendors/dincond-light-opentype.otf);
 }
 @font-face {
     font-family: 'DIN';
     font-weight: normal;
-    src: url(/vendors/din-regular-opentype.otf);
+    src: url(../../vendors/din-regular-opentype.otf);
 }
 @font-face {
     font-family: 'DIN';
     font-weight: 200;
-    src: url(/vendors/din-light-opentype.otf);
+    src: url(../../vendors/din-light-opentype.otf);
 }
 
 $grey-bkg: #e9eaee;
 $grey-border: #cbccd0;
-
+$grey-nav-color: #9999a0;
 @mixin border-radius($radius) {
   -webkit-border-radius: $radius;
      -moz-border-radius: $radius;
@@ -43,4 +43,14 @@ $grey-border: #cbccd0;
 @mixin square-box($lenght){
 	width: $lenght;
 	height: $lenght;
+}
+/* This is for positioning the bell, the only extra style you need
+to add are top and left */
+@mixin hot() {
+  content: " ";
+  background:  url('../img/footersocialsprite.png') no-repeat 0 -120px;
+  display: inline-block;
+  height: 30px;
+  width: 30px;
+  position: absolute;
 }
