@@ -45,6 +45,21 @@ body{
     .hot{
     	position: relative;
     }
+    .login {
+    	min-height: 700px;
+    	background: url('../img/loginback.jpg') no-repeat;
+    	padding: 105px 48px;
+    	p {
+    		color: #fff;
+    		font-family: 'DINCond';
+    		font-size: 30px;
+    		line-height: 30px;
+    		margin: 0 0 25px;
+    		&:first-child {
+    			margin: 0 0 64px;
+    		}
+    	}
+    }
 }
 header {
     .logo {
