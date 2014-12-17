@@ -9,6 +9,16 @@
         $('#test-local-login').click(function() {
             helper.testLocalLogin();
         })
+
+        $('#carousel').carousel({
+            interval: 10000000
+        });
+
+
+
+        $('.switch').on('click',function(){
+            $('#comp').toggle();
+        });
     });
 
     var helper = (function() {

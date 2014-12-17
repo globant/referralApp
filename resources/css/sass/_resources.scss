@@ -1,0 +1,46 @@
+/*
+ * This is for mixings, variables and functions
+*/
+$font-bold: "DINCond bold";
+$font-regular: "DINCond-regular";
+$title-font-color: #525254;
+$icon-sprite-path: "../img/icon-sprite.png";
+@font-face {
+    font-family: 'DINCond';
+    font-weight: bold;
+    src: url(/vendors/dincond-bold-opentype.otf);
+}
+@font-face {
+    font-family: 'DINCond';
+    font-weight: normal;
+    src: url(/vendors/dincond-regular-opentype.otf);
+}
+@font-face {
+    font-family: 'DINCond';
+    font-weight: 200;
+    src: url(/vendors/dincond-light-opentype.otf);
+}
+@font-face {
+    font-family: 'DIN';
+    font-weight: normal;
+    src: url(/vendors/din-regular-opentype.otf);
+}
+@font-face {
+    font-family: 'DIN';
+    font-weight: 200;
+    src: url(/vendors/din-light-opentype.otf);
+}
+
+$grey-bkg: #e9eaee;
+$grey-border: #cbccd0;
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
+@mixin square-box($lenght){
+	width: $lenght;
+	height: $lenght;
+}

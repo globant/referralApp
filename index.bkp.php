@@ -30,6 +30,7 @@
 
         <script src="/resources/js/jquery-1.11.1.min.js"></script>
         <script src="https://apis.google.com/js/client:platform.js" async defer></script>
+		<script src="/vendors/js/bootstrap.min.js" type="text/javascript"></script>
         <script src="/resources/js/custom.js"></script>
     </body>
 </html>

@@ -1,5 +1,8 @@
 Referral Application
 
+@TODO:
+ - Finish header logo and link positioning
+ - Finish footer links
 
 ---
 Apache2 Virtual Host
