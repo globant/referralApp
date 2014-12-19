@@ -15,6 +15,9 @@
         $('.switch').on('click',function(){
             $('#comp').toggle();
         });
+        
+        login();
+        
     });
 
     var helper = (function() {
@@ -65,9 +68,5 @@
                 });
             }
         };
-    })();
-
-    window.signInCallback = function(authResult) {
-        helper.signInCallback(authResult);
-    };
+    })();    
 })(jQuery);

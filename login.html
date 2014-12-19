@@ -16,11 +16,35 @@
 		<div class="container bs-docs-container">
 			<div class="row login">
 				<div class="col-md-5">
-				<p>We know you work with things you love. 
-					Here is the chance to work with people you have much more fun: your friends.</p>
-				<p>Refer a friend to work with us.</p>
-				<a href="" class="btn btn-green">Login</a>
-				</div>				
+					<p>We know you work with things you love. 
+						Here is the chance to work with people you have much more fun: your friends.</p>
+					<p>Refer a friend to work with us.</p>										
+				</div>
+				<div class="login-wrapper col-md-7">
+						<form action="" class="form-horizontal">
+							<fieldset>
+								<div class="form-group">
+									<label for="user">User</label>
+									<input type="text" id="user" name="user" placeholder="User Name">
+								</div>
+								<div class="form-group">
+									<label for="password">Password</label>
+									<input type="password" id="password" name="password" placeholder="Password">
+								</div>
+								<button type="submit" class="btn btn-green">Sign in</button>
+							</fieldset>
+						</form>
+						<div id="login-btn">
+				            <span class="g-signin"
+				                data-scope="https://www.googleapis.com/auth/plus.login"
+				                data-clientid="229737568035-t0isieq89rkd65av2uvebo4iu2jrju43.apps.googleusercontent.com"
+				                data-redirecturi="postmessage"
+				                data-accesstype="offline"
+				                data-callback="signInCallback"
+				                data-cookiepolicy="single_host_origin">
+				            </span>
+				        </div>
+				    </div>				
 			</div>			
 		</div>
 		<footer>
