@@ -73,10 +73,10 @@ body{
     			input[type="password"] {
     				padding: 5px;
     				font-family:'DINCond';
-    				color: #505050;
+    				color: $text-color;
     				font-size: 18px;
     				@include input-placeholder {
-			            color: #505050;		            
+			            color: $text-color;		            
 			        }  
     				&:focus {
     					border: 1px solid blue;
@@ -93,8 +93,31 @@ body{
     		#login-btn {
     			margin: 25px 0 0;
     		}
-    	}
+    	}    	
     }
+    .referafriend {
+    	min-height: 600px;
+    	@include desktop {
+    		min-height: 750px;
+    	}
+    	button.dropdown-toggle {
+			background: #fff;
+			color: $text-color;
+			padding: 6px 15px 6px 8px;
+			margin-bottom: 5px;
+			min-width: 173px;
+			position: relative; 
+			text-align: left;			
+			span.caret {
+				position: absolute;
+				border-top: 13px solid;
+				border-right: 8px solid transparent;
+				border-left: 8px solid transparent;
+				top: 15px;
+				right: 9px;
+			}
+		}
+	}
 }
 header {
     .logo {

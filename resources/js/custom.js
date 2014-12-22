@@ -15,9 +15,7 @@
         $('.switch').on('click',function(){
             $('#comp').toggle();
         });
-        
-        login();
-        
+       
     });
 
     var helper = (function() {

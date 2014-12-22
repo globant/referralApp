@@ -36,6 +36,7 @@
 /* This is for positioning the bell, the only extra style you need
 to add are top and left */
 /* Mixin for Placeholder */
+/* Media Queries for big monitors */
 /* line 1, sass/_buttons.scss */
 .btn {
   font-family: "DINCond-regular";
@@ -178,27 +179,27 @@ body .login .login-wrapper form input[type="password"] {
   color: #505050;
   font-size: 18px;
 }
-/* line 61, sass/_resources.scss */
+/* line 62, sass/_resources.scss */
 body .login .login-wrapper form input[type="text"].placeholder,
 body .login .login-wrapper form input[type="password"].placeholder {
   color: #505050;
 }
-/* line 62, sass/_resources.scss */
+/* line 63, sass/_resources.scss */
 body .login .login-wrapper form input[type="text"]:-moz-placeholder,
 body .login .login-wrapper form input[type="password"]:-moz-placeholder {
   color: #505050;
 }
-/* line 63, sass/_resources.scss */
+/* line 64, sass/_resources.scss */
 body .login .login-wrapper form input[type="text"]::-moz-placeholder,
 body .login .login-wrapper form input[type="password"]::-moz-placeholder {
   color: #505050;
 }
-/* line 64, sass/_resources.scss */
+/* line 65, sass/_resources.scss */
 body .login .login-wrapper form input[type="text"]:-ms-input-placeholder,
 body .login .login-wrapper form input[type="password"]:-ms-input-placeholder {
   color: #505050;
 }
-/* line 65, sass/_resources.scss */
+/* line 66, sass/_resources.scss */
 body .login .login-wrapper form input[type="text"]::-webkit-input-placeholder,
 body .login .login-wrapper form input[type="password"]::-webkit-input-placeholder {
   color: #505050;
@@ -208,27 +209,27 @@ body .login .login-wrapper form input[type="text"]:focus,
 body .login .login-wrapper form input[type="password"]:focus {
   border: 1px solid blue;
 }
-/* line 61, sass/_resources.scss */
+/* line 62, sass/_resources.scss */
 body .login .login-wrapper form input[type="text"]:focus.placeholder,
 body .login .login-wrapper form input[type="password"]:focus.placeholder {
   color: transparent;
 }
-/* line 62, sass/_resources.scss */
+/* line 63, sass/_resources.scss */
 body .login .login-wrapper form input[type="text"]:focus:-moz-placeholder,
 body .login .login-wrapper form input[type="password"]:focus:-moz-placeholder {
   color: transparent;
 }
-/* line 63, sass/_resources.scss */
+/* line 64, sass/_resources.scss */
 body .login .login-wrapper form input[type="text"]:focus::-moz-placeholder,
 body .login .login-wrapper form input[type="password"]:focus::-moz-placeholder {
   color: transparent;
 }
-/* line 64, sass/_resources.scss */
+/* line 65, sass/_resources.scss */
 body .login .login-wrapper form input[type="text"]:focus:-ms-input-placeholder,
 body .login .login-wrapper form input[type="password"]:focus:-ms-input-placeholder {
   color: transparent;
 }
-/* line 65, sass/_resources.scss */
+/* line 66, sass/_resources.scss */
 body .login .login-wrapper form input[type="text"]:focus::-webkit-input-placeholder,
 body .login .login-wrapper form input[type="password"]:focus::-webkit-input-placeholder {
   color: transparent;
@@ -241,8 +242,37 @@ body .login .login-wrapper form button.btn-green {
 body .login .login-wrapper #login-btn {
   margin: 25px 0 0;
 }
+/* line 98, sass/style.scss */
+body .referafriend {
+  min-height: 600px;
+}
+@media (min-width: 1480px) {
+  /* line 98, sass/style.scss */
+  body .referafriend {
+    min-height: 750px;
+  }
+}
+/* line 103, sass/style.scss */
+body .referafriend button.dropdown-toggle {
+  background: #fff;
+  color: #505050;
+  padding: 6px 15px 6px 8px;
+  margin-bottom: 5px;
+  min-width: 173px;
+  position: relative;
+  text-align: left;
+}
+/* line 111, sass/style.scss */
+body .referafriend button.dropdown-toggle span.caret {
+  position: absolute;
+  border-top: 13px solid;
+  border-right: 8px solid transparent;
+  border-left: 8px solid transparent;
+  top: 15px;
+  right: 9px;
+}
 
-/* line 100, sass/style.scss */
+/* line 123, sass/style.scss */
 header .logo {
   margin: 40px 0 40px -20px;
   display: inline-block;
@@ -252,7 +282,7 @@ header .logo {
   background-repeat: no-repeat;
   background-size: contain;
 }
-/* line 108, sass/style.scss */
+/* line 131, sass/style.scss */
 header .logo + h1 {
   display: inline-block;
   font-family: 'DINCond';
@@ -262,7 +292,7 @@ header .logo + h1 {
   position: relative;
   top: -64px;
 }
-/* line 116, sass/style.scss */
+/* line 139, sass/style.scss */
 header .logo + h1:before {
   content: "|";
   font-size: 24px;
@@ -270,17 +300,17 @@ header .logo + h1:before {
   position: relative;
   top: 0;
 }
-/* line 125, sass/style.scss */
+/* line 148, sass/style.scss */
 header .links {
   list-style-type: none;
   margin: 56px 0 0;
 }
-/* line 128, sass/style.scss */
+/* line 151, sass/style.scss */
 header .links li {
   display: inline-block;
   margin: 0 0 0 15px;
 }
-/* line 131, sass/style.scss */
+/* line 154, sass/style.scss */
 header .links li a {
   display: block;
   padding: 5px 10px;
@@ -291,7 +321,7 @@ header .links li a {
   color: #9999a0;
   text-decoration: none;
 }
-/* line 140, sass/style.scss */
+/* line 163, sass/style.scss */
 header .links li a.active {
   background-color: #ffffff;
   -webkit-border-radius: 5px;
@@ -299,7 +329,7 @@ header .links li a.active {
   -ms-border-radius: 5px;
   border-radius: 5px;
 }
-/* line 144, sass/style.scss */
+/* line 167, sass/style.scss */
 header .links li a:hover {
   text-decoration: none;
   -webkit-border-radius: 5px;
@@ -309,16 +339,16 @@ header .links li a:hover {
   background: rgba(255, 255, 255, 0.5);
 }
 
-/* line 153, sass/style.scss */
+/* line 176, sass/style.scss */
 .bs-docs-container {
   margin-top: 5px;
 }
 
-/* line 156, sass/style.scss */
+/* line 179, sass/style.scss */
 #hot-positions {
   padding: 0 16px 0 0;
 }
-/* line 159, sass/style.scss */
+/* line 182, sass/style.scss */
 #hot-positions .head {
   background: #e5e3e4;
   /* Old browsers */
@@ -339,27 +369,27 @@ header .links li a:hover {
   padding: 0px 47px;
   border: 1px solid #cbccd0;
 }
-/* line 172, sass/style.scss */
+/* line 195, sass/style.scss */
 #hot-positions .head h2 {
   font-size: 31px;
   margin: 0px;
   letter-spacing: -0.2px;
 }
-/* line 177, sass/style.scss */
+/* line 200, sass/style.scss */
 #hot-positions .head p {
   color: #525254;
   font-size: 20px;
   letter-spacing: 0.01em;
   margin: 0px;
 }
-/* line 184, sass/style.scss */
+/* line 207, sass/style.scss */
 #hot-positions .content {
   background-color: #e9eaee;
   padding: 20px 80px 10px;
   border: 1px solid #cbccd0;
   border-top: 0;
 }
-/* line 191, sass/style.scss */
+/* line 214, sass/style.scss */
 #hot-positions .content .carousel a.left,
 #hot-positions .content .carousel a.right {
   background: url("../img/icon-sprite.png") no-repeat transparent;
@@ -368,26 +398,26 @@ header .links li a:hover {
   top: 50%;
   margin-top: -20px;
 }
-/* line 198, sass/style.scss */
+/* line 221, sass/style.scss */
 #hot-positions .content .carousel a.left {
   left: -65px;
   background-position: 0px -26px;
 }
-/* line 202, sass/style.scss */
+/* line 225, sass/style.scss */
 #hot-positions .content .carousel a.right {
   right: -65px;
   background-position: -42px -26px;
 }
-/* line 207, sass/style.scss */
+/* line 230, sass/style.scss */
 #hot-positions .content .carousel .carousel-inner .item {
   width: 450px;
   margin: 0px auto;
 }
-/* line 211, sass/style.scss */
+/* line 234, sass/style.scss */
 #hot-positions .content .carousel .carousel-inner .item.active {
   display: block;
 }
-/* line 214, sass/style.scss */
+/* line 237, sass/style.scss */
 #hot-positions .content .carousel .carousel-inner .item h3 {
   font-size: 24px;
   font-weight: normal;
@@ -395,7 +425,7 @@ header .links li a:hover {
   margin: 0 0 0 20px;
   text-transform: uppercase;
 }
-/* line 221, sass/style.scss */
+/* line 244, sass/style.scss */
 #hot-positions .content .carousel .carousel-inner .item h3.hot:before {
   content: " ";
   background: url("../img/footersocialsprite.png") no-repeat 0 -120px;
@@ -406,11 +436,11 @@ header .links li a:hover {
   left: -28px;
   top: -5px;
 }
-/* line 228, sass/style.scss */
+/* line 251, sass/style.scss */
 #hot-positions .content .carousel .carousel-inner .item .location {
   margin-left: 20px;
 }
-/* line 230, sass/style.scss */
+/* line 253, sass/style.scss */
 #hot-positions .content .carousel .carousel-inner .item .location:before {
   content: " ";
   width: 20px;
@@ -419,11 +449,11 @@ header .links li a:hover {
   display: inline-block;
   background: url("../img/icon-sprite.png") top left no-repeat transparent;
 }
-/* line 239, sass/style.scss */
+/* line 262, sass/style.scss */
 #hot-positions .content .carousel .carousel-inner .item .seniority {
   margin-left: 28px;
 }
-/* line 242, sass/style.scss */
+/* line 265, sass/style.scss */
 #hot-positions .content .carousel .carousel-inner .item .seniority:before {
   content: " ";
   width: 20px;
@@ -432,25 +462,25 @@ header .links li a:hover {
   display: inline-block;
   background: url("../img/icon-sprite.png") -24px 0 no-repeat transparent;
 }
-/* line 251, sass/style.scss */
+/* line 274, sass/style.scss */
 #hot-positions .content .carousel .carousel-inner .item .location, #hot-positions .content .carousel .carousel-inner .item .seniority {
   color: #525254;
   margin-top: 10px;
   display: inline-block;
   font-size: 23px;
 }
-/* line 257, sass/style.scss */
+/* line 280, sass/style.scss */
 #hot-positions .content .carousel .carousel-inner .item .btn {
   position: absolute;
   top: 26px;
   right: 0px;
 }
-/* line 264, sass/style.scss */
+/* line 287, sass/style.scss */
 #hot-positions .content .carousel .carousel-indicators {
   position: static;
   margin: 10px auto 5px;
 }
-/* line 268, sass/style.scss */
+/* line 291, sass/style.scss */
 #hot-positions .content .carousel .carousel-indicators li {
   width: 14px;
   height: 14px;
@@ -458,71 +488,71 @@ header .links li a:hover {
   border: 1px solid #d8d8da;
   background-color: #d8d8da;
 }
-/* line 273, sass/style.scss */
+/* line 296, sass/style.scss */
 #hot-positions .content .carousel .carousel-indicators li.active {
   border: 1px solid #bab9be;
   background-color: #bab9be;
 }
 
-/* line 282, sass/style.scss */
+/* line 305, sass/style.scss */
 #top-globers {
   padding: 0;
 }
-/* line 285, sass/style.scss */
+/* line 308, sass/style.scss */
 #top-globers h2 {
   font-size: 25px;
   margin: 0px;
 }
-/* line 289, sass/style.scss */
+/* line 312, sass/style.scss */
 #top-globers ul {
   padding: 0px;
 }
-/* line 292, sass/style.scss */
+/* line 315, sass/style.scss */
 #top-globers ul li {
   border-bottom: 2px solid #d4d3d9;
   padding: 6px 25px 6px 0px;
   overflow: hidden;
 }
-/* line 297, sass/style.scss */
+/* line 320, sass/style.scss */
 #top-globers ul li p {
   font-size: 18px;
   float: left;
   margin-bottom: 0px;
 }
-/* line 302, sass/style.scss */
+/* line 325, sass/style.scss */
 #top-globers ul li span {
   color: #e61191;
   float: right;
   font-size: 20px;
 }
 
-/* line 310, sass/style.scss */
+/* line 333, sass/style.scss */
 #recent-position {
   padding: 0px;
 }
-/* line 313, sass/style.scss */
+/* line 336, sass/style.scss */
 #recent-position table {
   width: 100%;
 }
-/* line 316, sass/style.scss */
+/* line 339, sass/style.scss */
 #recent-position table thead tr {
   border: 1px solid #cbccd0;
   text-transform: uppercase;
   background-color: #e9eaee;
 }
-/* line 321, sass/style.scss */
+/* line 344, sass/style.scss */
 #recent-position table thead tr th {
   padding: 5px 0px 0px 10px;
   font-size: 23px;
   font-weight: normal;
 }
-/* line 329, sass/style.scss */
+/* line 352, sass/style.scss */
 #recent-position table tbody tr td {
   padding: 10px 20px;
   font-size: 18px;
   border-bottom: 2px solid #d4d3d9;
 }
-/* line 334, sass/style.scss */
+/* line 357, sass/style.scss */
 #recent-position table tbody tr td.hot:before {
   content: " ";
   background: url("../img/footersocialsprite.png") no-repeat 0 -120px;
@@ -533,29 +563,29 @@ header .links li a:hover {
   top: 12px;
   left: -7px;
 }
-/* line 340, sass/style.scss */
+/* line 363, sass/style.scss */
 #recent-position table tbody tr td .btn {
   font-size: 24px;
   vertical-align: middle;
 }
-/* line 348, sass/style.scss */
+/* line 371, sass/style.scss */
 #recent-position .view-all {
   padding: 0px 40px;
   margin-top: 15px;
 }
 
-/* line 353, sass/style.scss */
+/* line 376, sass/style.scss */
 #extra-referral {
   padding: 15px 10px;
   margin: 50px 0px;
   background-color: #e9eaee;
   font-size: 23px;
 }
-/* line 359, sass/style.scss */
+/* line 382, sass/style.scss */
 #extra-referral p {
   margin: 0px;
 }
-/* line 362, sass/style.scss */
+/* line 385, sass/style.scss */
 #extra-referral .refer-now {
   padding: 0px 30px;
   position: absolute;
@@ -564,12 +594,12 @@ header .links li a:hover {
   margin-top: -15px;
 }
 
-/* line 370, sass/style.scss */
+/* line 393, sass/style.scss */
 footer {
   padding: 20px 10px;
   background-color: #d4d3d3;
 }
-/* line 374, sass/style.scss */
+/* line 397, sass/style.scss */
 footer .social a {
   display: block;
   width: 40px;
@@ -579,19 +609,19 @@ footer .social a {
   float: left;
   margin: 0 0 0 15px;
 }
-/* line 382, sass/style.scss */
+/* line 405, sass/style.scss */
 footer .social a.twitter {
   background-position: 0 -80px;
 }
-/* line 385, sass/style.scss */
+/* line 408, sass/style.scss */
 footer .social a.facebook {
   background-position: 0 0;
 }
-/* line 388, sass/style.scss */
+/* line 411, sass/style.scss */
 footer .social a.linkedin {
   background-position: 0 -40px;
 }
-/* line 392, sass/style.scss */
+/* line 415, sass/style.scss */
 footer .social .copyright {
   font-family: 'DIN';
   font-size: 23px;
@@ -601,7 +631,7 @@ footer .social .copyright {
   line-height: 40px;
 }
 
-/* line 402, sass/style.scss */
+/* line 425, sass/style.scss */
 div#comp {
   display: none;
   opacity: .5;
@@ -610,7 +640,7 @@ div#comp {
   left: -15px;
 }
 
-/* line 409, sass/style.scss */
+/* line 432, sass/style.scss */
 .switch {
   position: absolute;
   top: 10px;
