@@ -6,6 +6,7 @@
 /*@import "compass/reset";*/
 @import "../../vendors/css/bootstrap.css";
 @import "../../vendors/css/bootstrap-theme.min.css";
+@import "../../vendors/css/bootstrap-select.min.css";
 @import "resources";
 @import "buttons";
 h1, h2, h3, h4, h5{
@@ -75,12 +76,12 @@ body{
     				font-family:'DINCond';
     				color: $text-color;
     				font-size: 18px;
+    				@include border-radius(5px);
     				@include input-placeholder {
 			            color: $text-color;		            
 			        }  
     				&:focus {
-    					border: 1px solid blue;
-    					@include input-placeholder {
+    						@include input-placeholder {
 				            color: transparent;		            
 				        }
     				} 
@@ -117,6 +118,18 @@ body{
 				right: 9px;
 			}
 		}
+		form {
+			margin: 32px 0 0 ;
+			legend {
+				font-family: 'DINCond';
+				font-size: 24px;
+				background: #e8eaec;
+				border: 1px solid #ccccce;
+				color: $text-color;
+				padding: 14px 12px;
+				margin: 0 0 32px;
+			}
+		}		
 	}
 }
 header {
