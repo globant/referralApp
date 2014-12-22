@@ -1,4 +1,5 @@
 <?php
+$config = new \Phalcon\Config\Adapter\Ini('config/config.ini');
 $loader = new \Phalcon\Loader();
 $loader->registerNamespaces(
     array(
@@ -13,13 +14,14 @@ $loader->registerNamespaces(
 )->register();
 
 $di = new \Phalcon\DI\FactoryDefault();
-$di->set('db', function(){
+$di->set('config', $config);
+$di->set('db', function() use ($config) {
     return new \Phalcon\Db\Adapter\Pdo\Mysql(
         array(
-            'host' => 'localhost',
-            'username' => 'root',
-            'password' => '',
-            'dbname' => 'micro'
+            'host' => $config->database->host,
+            'username' => $config->database->username,
+            'password' => $config->database->password,
+            'dbname' => $config->database->name,
         )
     );
 });

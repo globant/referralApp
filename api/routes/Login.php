@@ -5,16 +5,12 @@ use \Models\User;
 
 class Login extends Base
 {
-    const CLIENT_ID = '229737568035-t0isieq89rkd65av2uvebo4iu2jrju43.apps.googleusercontent.com';
-    const CLIENT_SECRET = 'Kfy5Tj5KFho0N62Ykoc8dtt_';
-
     public $client;
-
     protected function _init()
     {
         $client = new \Google_Client();
-        $client->setClientId(self::CLIENT_ID);
-        $client->setClientSecret(self::CLIENT_SECRET);
+        $client->setClientId($this->config->googleSignon->clientId);
+        $client->setClientSecret($this->config->googleSignon->clientSecret);
         $client->setRedirectUri('postmessage');
         $this->client = $client;
 
@@ -101,7 +97,7 @@ class Login extends Base
      */
     private function _validateToken($token)
     {
-        $url = 'https://www.googleapis.com/oauth2/v1/tokeninfo?access_token=' . $token->access_token;
+        $url = $this->config->googleSignon->validateTokenUrl . $token->access_token;
         $req = new \Google_Http_Request($url);
 
         $tokenInfo = json_decode($this->client->getIo()->makeRequest($req)->getResponseBody());
@@ -113,7 +109,7 @@ class Login extends Base
                 'success' => false,
                 'message' => $tokenInfo->error,
             );
-        } elseif ($tokenInfo->audience != self::CLIENT_ID) {
+        } elseif ($tokenInfo->audience != $this->config->googleSignon->clientId) {
             $validation = array(
                 'status_code' => 401,
                 'status_message' => 'Client ID mismatch',
