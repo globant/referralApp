@@ -36,6 +36,7 @@ $grey-border: #cbccd0;
 $grey-nav-color: #9999a0;
 $text-color: #505050;
 $border-color: #ccccce;
+$pink: #ec008c;
 @mixin border-radius($radius) {
   -webkit-border-radius: $radius;
      -moz-border-radius: $radius;
@@ -75,3 +76,16 @@ $big: 1480px;
     @content;
   }
 }
+
+/* Box Shadow */
+@mixin box-shadow($top, $left, $blur, $color, $inset: false) {
+  @if $inset {
+  -webkit-box-shadow:inset $top $left $blur $color;
+  -moz-box-shadow:inset $top $left $blur $color;
+  box-shadow:inset $top $left $blur $color;
+  } @else {
+  -webkit-box-shadow: $top $left $blur $color;
+  -moz-box-shadow: $top $left $blur $color;
+  box-shadow: $top $left $blur $color;
+  }
+} 
