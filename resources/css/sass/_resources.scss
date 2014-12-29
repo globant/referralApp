@@ -37,6 +37,9 @@ $grey-nav-color: #9999a0;
 $text-color: #505050;
 $border-color: #ccccce;
 $pink: #ec008c;
+$border-box-color: #cfcfd1;
+$th-background: #e8eaec;
+
 @mixin border-radius($radius) {
   -webkit-border-radius: $radius;
      -moz-border-radius: $radius;

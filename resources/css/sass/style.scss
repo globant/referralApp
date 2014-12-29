@@ -200,7 +200,7 @@ body{
     	}
 		.profile {
 			background: #e8eaec;
-			border: 1px solid #cfcfd1;
+			border: 1px solid $border-box-color;
 			padding: 4px 3px;
 			margin-bottom: 93px;
 			@include box-shadow(0px, 3px, 9px, #e1e0e1);
@@ -214,7 +214,7 @@ body{
 			}
 			h2 {
 				color: $text-color;
-				border-bottom: 2px solid #cfcfd1;
+				border-bottom: 2px solid $border-box-color;
 				text-transform: none;
 				padding-bottom: 3px;
 				margin-bottom: 24px;
@@ -249,6 +249,146 @@ body{
 						&.hightlighted {
 							color: $pink;
 						}
+					}
+				}
+			}
+		}
+	}
+	.hrhome {
+		min-height: 600px;
+    	@include desktop {
+    		min-height: 750px;
+    	} 
+		ul.status {
+			padding: 0;
+			list-style: none;
+			border: 1px solid $border-box-color;
+			padding: 15px 17px;
+			background: #e9e8e8;
+			margin: 0 0 46px;
+			li {
+				font-family: 'DINCond';
+				font-size: 18px;
+				color: $text-color;
+				display: inline-block;
+				margin: 0 0 0 42px;
+				&:first-child {
+					font-weight: bold;
+					margin-left: 0;
+				}				
+			}
+		}
+		h2 {
+			color: $text-color;
+			font-size: 32px;
+			margin: 0 0 30px;
+			span {
+				a{
+					font-family: 'DIN';
+					font-size: 17px;
+					color: $grey-nav-color;
+					font-weight: 100;
+					&:before {
+						content: "|";
+						margin: 0 10px 0 7px;
+
+					}
+					&:first-child:before {
+						display: none;
+					}
+
+				}
+			}
+		}
+		.view-all {
+			padding: 0px 40px;
+			margin: 15px 0 60px;
+		}
+	}
+	div.status-data {
+		@include square-box(16px);
+		border: 1px solid $border-box-color;
+		@include border-radius(9px);
+		display: inline-block;
+		margin: 0 12px 0 0;
+		position: relative;
+		top: 2px;
+		&.twodays {
+			background: #ff0000;
+		}
+		&.oneday {
+			background: #f6ff00;
+		}
+		&.new {
+			background: #1ebd04;
+		}
+		&.reviewed {
+			@include border-radius(0px);
+			top: 0;
+			border: none;
+			background: url('../img/reviewed.png') no-repeat;
+		}
+	}
+	table {
+		width: 100%;
+		thead {
+			tr {
+				border: 1px solid $border-color;				
+				th {
+					font-family: 'DINCond';
+					font-size: 24px;
+					color: $text-color;
+					background: $th-background;
+					padding: 20px 0 12px 20px;
+					text-transform: uppercase;
+					&:first-child {
+						padding-left: 44px;
+					}
+				}
+			}
+		}
+		tbody {
+			tr {
+				td {
+					padding: 10px 20px;
+					font-size: 18px;
+					border-bottom: 2px solid #D4D3D9;
+					position: relative;
+					vertical-align: middle!important;
+					div.status-data {
+						position: absolute;
+						left: 10px;
+						top: 24px;
+						&.reviewed {
+							position: absolute;
+							top: 24px;
+						}
+					}
+					button.dropdown-toggle  {
+						background: #fff;
+						color: $text-color;
+						padding: 6px 15px 6px 8px;
+						margin-bottom: 5px;
+						min-width: 127px;
+						position: relative; 
+						text-align: left;
+						border: 1px solid $border-box-color;
+						@include border-radius(5px);
+						span.caret {
+							position: absolute;
+							border-top: 13px solid;
+							border-right: 8px solid transparent;
+							border-left: 8px solid transparent;
+							top: 15px;
+							right: 9px;
+						}
+					}
+					&:first-child {
+						padding-left: 44px;
+						max-width: 100px;
+					    overflow: hidden;
+					    text-overflow: ellipsis;
+					    white-space: nowrap;
 					}
 				}
 			}

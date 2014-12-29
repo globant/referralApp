@@ -28,65 +28,254 @@
 
 		<div class="container bs-docs-container hrhome">
 			<div class="row">
-				<div class="pull-right status-data">
+				<div class="pull-right">
 					<ul class="status">
-						<li>status:</li>
-						<li><div class="twodays"></div>Two days old</li>
-						<li><div class="oneday"></div>One day old</li>
-						<li><div class="new"></div>New submission</li>
-						<li><div class="reviewed"></div>Reviewed</li>
+						<li>Status:</li>
+						<li><div class="status-data twodays"></div>Two days old</li>
+						<li><div class="status-data oneday"></div>One day old</li>
+						<li><div class="status-data new"></div>New submission</li>
+						<li><div class="status-data reviewed"></div>Reviewed</li>
 					</ul>
 				</div>				
 			</div>
 			<div class="row">
-				
-			</div>
-			<div class="row">
-				<section id='recent-position' class="col-md-12">
-					<h2>My Refers </h2>
-					<a href="#" class="btn btn-green">Refer a friend</a>
-					<table>
+				<section id="new-refers">
+					<h2>New Refers <span class="pull-right"><a href="#" title="To Manage Positions">Manage Positions</a><a href="#" title="To Report">Report</a></span></h2>		
+					<table class="table">
 						<thead>
 							<tr>
 								<th>Name</th>
-								<th>Date</th>
-								<th>Status</th>
-								<th>Points</th>
+								<th>Position</th>
+								<th>Location</th>
+								<th>Seniority</th>
+								<th>Recruiter</th>
+								<th>Submission</th>
 							</tr>
 						</thead>
 						<tbody>
 							<tr>
-								<td>Ana Marafiga</td>
-								<td>22/01/2011</td>
-								<td>Hired</td>
-								<td  class="hightlighted"></td>
+								<td><div class="status-data new"></div>Ana Paula Pinto Marafiga</td>
+								<td>Test Automation Engineer</td>
+								<td>Bogot&aacute; and other locations</td>
+								<td>Senior</td>
+								<td>
+									<div class="dropdown">
+									  <button class="btn btn-default dropdown-toggle" type="button" id="drop1" data-toggle="dropdown" aria-expanded="true">
+									    Not Asigned
+									    <span class="caret"></span>
+									  </button>
+									  <ul class="dropdown-menu" role="menu" aria-labelledby="drop1">
+									    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Alejandro Gamen</a></li>
+									    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Celina Cresta</a></li>
+									    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Emilia Vicini</a></li>   
+									  </ul>
+									</div>
+								</td>
+								<td>13/12/2013</td>
 							</tr>
 							<tr>
-								<td>Thiago Higa</td>
-								<td>05/07/2012</td>
-								<td>Reviewed</td>
-								<td class="hightlighted">150 points</td>
+								<td><div class="status-data new"></div>Emilia Tavernari da Coseni</td>
+								<td>Client Partner</td>
+								<td>Bogot&aacute;</td>
+								<td>Junior</td>
+								<td>
+									<div class="dropdown">
+									  <button class="btn btn-default dropdown-toggle" type="button" id="drop2" data-toggle="dropdown" aria-expanded="true">
+									    Not Asigned
+									    <span class="caret"></span>
+									  </button>
+									  <ul class="dropdown-menu" role="menu" aria-labelledby="drop2">
+									    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Alejandro Gamen</a></li>
+									    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Celina Cresta</a></li>
+									    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Emilia Vicini</a></li>   
+									  </ul>
+									</div>
+								</td>
+								<td>14/12/2013</td>
 							</tr>
 							<tr>
-								<td>Juliano Dlas</td>
-								<td>18/03/2012</td>
-								<td>Profile saved</td>
-								<td class="hightlighted"></td>
+								<td><div class="status-data reviewed"></div>Tiago Higa</td>
+								<td>Python Developer</td>
+								<td>Bogot&aacute; and other locations</td>
+								<td>Senior</td>
+								<td>
+									<div class="dropdown">
+									  <button class="btn btn-default dropdown-toggle" type="button" id="drop3" data-toggle="dropdown" aria-expanded="true">
+									    Not Asigned
+									    <span class="caret"></span>
+									  </button>
+									  <ul class="dropdown-menu" role="menu" aria-labelledby="drop3">
+									    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Alejandro Gamen</a></li>
+									    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Celina Cresta</a></li>
+									    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Emilia Vicini</a></li>   
+									  </ul>
+									</div>
+								</td>
+								<td>12/12/2013</td>
 							</tr>
 							<tr>
-								<td>Aron Fisman</td>
-								<td>22/08/2014</td>
-								<td>Reviewed</td>
-								<td class="hightlighted">150 points</td>
+								<td><div class="status-data oneday"></div>Cecilia Kremer</td>
+								<td>Android Developer</td>
+								<td>Bogot&aacute;</td>
+								<td>Junior</td>
+								<td>
+									<div class="dropdown">
+									  <button class="btn btn-default dropdown-toggle" type="button" id="drop4" data-toggle="dropdown" aria-expanded="true">
+									    Not Asigned
+									    <span class="caret"></span>
+									  </button>
+									  <ul class="dropdown-menu" role="menu" aria-labelledby="drop4">
+									    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Alejandro Gamen</a></li>
+									    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Celina Cresta</a></li>
+									    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Emilia Vicini</a></li>   
+									  </ul>
+									</div>
+								</td>
+								<td>12/12/2013</td>
 							</tr>
 							<tr>
-								<td>Yamil Jacobo</td>
-								<td>27/08/2014</td>
-								<td>Interviewed</td>
-								<td class="hightlighted"></td>
+								<td><div class="status-data twodays"></div>Breno Campos</td>
+								<td>Client/Sales Partner</td>
+								<td>San Francisco</td>
+								<td>Semi Senior</td>
+								<td>
+									<div class="dropdown">
+									  <button class="btn btn-default dropdown-toggle" type="button" id="drop5" data-toggle="dropdown" aria-expanded="true">
+									    Not Asigned
+									    <span class="caret"></span>
+									  </button>
+									  <ul class="dropdown-menu" role="menu" aria-labelledby="drop5">
+									    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Alejandro Gamen</a></li>
+									    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Celina Cresta</a></li>
+									    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Emilia Vicini</a></li>   
+									  </ul>
+									</div>
+								</td>
+								<td>12/12/2013</td>
 							</tr>
 						</tbody>
 					</table>
+					<a href="#" class="view-all btn btn-info">View All</a>
+				</section>
+			</div>
+			<div class="row">
+				<section id='myasignment'>
+					<h2>My Assignments</h2>
+					<table class="table">
+						<thead>
+							<tr>
+								<th>Name</th>
+								<th>Position</th>
+								<th>Location</th>
+								<th>Seniority</th>
+								<th>Recruiter</th>
+								<th>Submission</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td><div class="status-data new"></div>Ana Paula Pinto Marafiga</td>
+								<td>Test Automation Engineer</td>
+								<td>Bogot&aacute; and other locations</td>
+								<td>Senior</td>
+								<td>
+									<div class="dropdown">
+									  <button class="btn btn-default dropdown-toggle" type="button" id="dropb1" data-toggle="dropdown" aria-expanded="true">
+									    Not Asigned
+									    <span class="caret"></span>
+									  </button>
+									  <ul class="dropdown-menu" role="menu" aria-labelledby="dropb1">
+									    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Alejandro Gamen</a></li>
+									    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Celina Cresta</a></li>
+									    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Emilia Vicini</a></li>   
+									  </ul>
+									</div>
+								</td>
+								<td>13/12/2013</td>
+							</tr>
+							<tr>
+								<td><div class="status-data new"></div>Emilia Tavernari da Coseni</td>
+								<td>Client Partner</td>
+								<td>Bogot&aacute;</td>
+								<td>Junior</td>
+								<td>
+									<div class="dropdown">
+									  <button class="btn btn-default dropdown-toggle" type="button" id="dropb2" data-toggle="dropdown" aria-expanded="true">
+									    Not Asigned
+									    <span class="caret"></span>
+									  </button>
+									  <ul class="dropdown-menu" role="menu" aria-labelledby="dropb2">
+									    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Alejandro Gamen</a></li>
+									    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Celina Cresta</a></li>
+									    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Emilia Vicini</a></li>   
+									  </ul>
+									</div>
+								</td>
+								<td>14/12/2013</td>
+							</tr>
+							<tr>
+								<td><div class="status-data reviewed"></div>Tiago Higa</td>
+								<td>Python Developer</td>
+								<td>Bogot&aacute; and other locations</td>
+								<td>Senior</td>
+								<td>
+									<div class="dropdown">
+									  <button class="btn btn-default dropdown-toggle" type="button" id="dropb3" data-toggle="dropdown" aria-expanded="true">
+									    Not Asigned
+									    <span class="caret"></span>
+									  </button>
+									  <ul class="dropdown-menu" role="menu" aria-labelledby="dropb3">
+									    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Alejandro Gamen</a></li>
+									    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Celina Cresta</a></li>
+									    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Emilia Vicini</a></li>   
+									  </ul>
+									</div>
+								</td>
+								<td>12/12/2013</td>
+							</tr>
+							<tr>
+								<td><div class="status-data oneday"></div>Cecilia Kremer</td>
+								<td>Android Developer</td>
+								<td>Bogot&aacute;</td>
+								<td>Junior</td>
+								<td>
+									<div class="dropdown">
+									  <button class="btn btn-default dropdown-toggle" type="button" id="dropb4" data-toggle="dropdown" aria-expanded="true">
+									    Not Asigned
+									    <span class="caret"></span>
+									  </button>
+									  <ul class="dropdown-menu" role="menu" aria-labelledby="dropb4">
+									    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Alejandro Gamen</a></li>
+									    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Celina Cresta</a></li>
+									    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Emilia Vicini</a></li>   
+									  </ul>
+									</div>
+								</td>
+								<td>12/12/2013</td>
+							</tr>
+							<tr>
+								<td><div class="status-data twodays"></div>Breno Campos</td>
+								<td>Client/Sales Partner</td>
+								<td>San Francisco</td>
+								<td>Semi Senior</td>
+								<td>
+									<div class="dropdown">
+									  <button class="btn btn-default dropdown-toggle" type="button" id="dropb5" data-toggle="dropdown" aria-expanded="true">
+									    Not Asigned
+									    <span class="caret"></span>
+									  </button>
+									  <ul class="dropdown-menu" role="menu" aria-labelledby="dropb5">
+									    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Alejandro Gamen</a></li>
+									    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Celina Cresta</a></li>
+									    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Emilia Vicini</a></li>   
+									  </ul>
+									</div>
+								</td>
+								<td>12/12/2013</td>
+							</tr>
+						</tbody>
+					</table>
+					<a href="#" class="view-all btn btn-info">View All</a>
 				</section>
 			</div>
 			
