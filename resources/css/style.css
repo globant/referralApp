@@ -563,7 +563,7 @@ body table tbody tr td {
 body table tbody tr td div.status-data {
   position: absolute;
   left: 10px;
-  top: 24px;
+  top: 31px;
 }
 /* line 362, sass/style.scss */
 body table tbody tr td div.status-data.reviewed {
