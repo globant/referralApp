@@ -132,13 +132,16 @@ body{
 			}
 			.form-group {
 				margin-bottom: 23px;
-				label {
+				label, 
+				p.label {
 					display: block;
 					font-family: 'DINCond';
 					font-size: 18px;
 					color: $text-color;
 					text-rendering: optimizeLegibility;
 					padding-left: 5px;
+					text-align: left;
+					clear: left;
 				}
 				input[type="text"],
 				input[type="email"],
@@ -150,6 +153,18 @@ body{
 					font-family: 'DINCond';
 					font-size: 18px;
 					color: $text-color;
+				}
+				input[type="radio"] {
+					display: inline-block;
+					margin-right: 5px;
+					& + label {
+						width: 40px;
+						display: inline-block
+					}
+				}
+				.right, .left {
+					float: left;
+					width: 80px;
 				}
 				button.selectpicker {
 					width: 173px;
