@@ -204,7 +204,39 @@ body{
 						top: -1px;
 						left: 208px;
 					}
-				}				
+				}
+				p {
+					margin-bottom: 23px;
+					a.data-type {
+						font-family: 'DINCond';
+						font-size: 18px;
+						color: $text-color;
+						&:before {
+							content: "";
+							width: 32px;
+							height: 32px;
+							display: inline-block;
+							position: relative;
+							top: 9px;
+							background: url('../img/doctypesprite.png') no-repeat
+						}
+						&[href$="pdf"]:before {						
+							background-position:  -10px -42px;
+						}
+						&[href$="doc"]:before, &[href$="docx"]:before {
+							background-position: -52px -0px;
+						}
+						&[href$="psd"]:before {	
+							background-position: -52px -42px;
+						}
+						&[href$="ai"]:before {
+							background-position: -10px -0px;
+						}
+					}	
+				}
+				.save {
+					margin-right: 66px;
+				}			
 			}
 		}		
 	}
