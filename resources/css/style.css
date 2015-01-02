@@ -696,7 +696,7 @@ body table tbody tr td:first-child {
 /* line 472, sass/style.scss */
 body table.report td {
   max-width: 130px;
-  overflow: hidden;
+  overflow-y: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
