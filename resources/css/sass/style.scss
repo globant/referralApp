@@ -509,6 +509,12 @@ body{
 					top: 15px;
 					right: 15px;
 				}
+				&.filter.selected {
+					//Selected class would appear when the filter is applied
+					.caret {
+						@include rotate(-180);
+					}
+				}
 			}			
 		}
 	}
