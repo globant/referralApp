@@ -5,5 +5,6 @@ return 'CREATE TABLE IF NOT EXISTS `user` (
     `email` VARCHAR(100) NOT NULL,
     `points` INT(11),
     `name` VARCHAR(100),
+    `lid` INT(11),
     PRIMARY KEY (`id`)
 );';

@@ -16,6 +16,7 @@ class App
         $app->post('/local-login', array(new \Routes\Login($di), 'localLogin'));
         $app->get('/local-logout', array(new \Routes\Login($di), 'localLogout'));
         $app->get('/current-user', array(new \Routes\Login($di), 'getCurrentUser'));
+        $app->get('/users', array(new \Routes\User($di), 'get'));
         $app->get('/positions', array(new \Routes\Positions($di), 'get'));
 
 

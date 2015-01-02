@@ -25,7 +25,14 @@ class User extends \Phalcon\Mvc\Model
      * @Column(type="string", length=100, nullable=false)
      */
     public $name;
+    /**
+     * @Column(type="integer", length=11, nullable=true)
+     */
+    public $lid;
 
+    public function initialize() {
+        $this->hasOne('lid', 'Models\Location', 'id', array('alias' => 'location'));
+    }
     public static function getUserByCredentials($email, $password) {
         $user = User::query()
             ->where('email = :email:')

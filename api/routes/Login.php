@@ -85,7 +85,8 @@ class Login extends Base
 
             $user = User::getUserByCredentials($email, $password);
             if (!empty($user)) {
-                //adding the user to session
+                //adding the user to session, blank the pass from the object
+                $user->password = '';
                 $this->session->set('user', json_encode($user));
                 $response = array(
                     'success' => true,
