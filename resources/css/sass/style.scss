@@ -64,12 +64,8 @@ body{
     	.login-wrapper{
     		position: relative;
     		form {
-    			label{
-    				width: 68px;
-    				margin-left: 15px;
-    				color: #ec008c;
-    				font-family: 'DINCond';
-    				font-size: 18px;
+    			.form-group {
+    				padding: 0 15px;
     			}
     			input[type="text"], 
     			input[type="password"] {
