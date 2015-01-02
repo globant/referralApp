@@ -480,6 +480,44 @@ body{
 				}
 			}
 		}
+		&.manage-positions {
+			max-width: 980px;
+			th:first-child, td:first-child {
+				padding-left: 15px;
+			}
+			
+			th:nth-chidl(n+3), td:nth-child(n+3) {
+				max-width: auto;
+				width: 205px;
+			}
+			th:nth-child(n+4), td:nth-child(n+4) {
+				text-align: center;
+				width: 167px;
+				text-transform: uppercase;				
+			}
+			th:last-child, td:last-child {
+				width: 147px;
+			}
+			th {
+				position: relative;
+				.caret	{
+					position: absolute;
+					border-top: 13px solid;
+					border-right: 8px solid transparent;
+					border-left: 8px solid transparent;
+					top: 15px;
+					right: 15px;
+				}
+			}
+			td {
+				.bootstrap-select.btn-group {
+					width: 100%!important; 
+					span.caret {
+						top: 38%;
+					}
+				}
+			}
+		}
 	}
 }
 header {
