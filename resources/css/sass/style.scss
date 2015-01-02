@@ -439,23 +439,24 @@ body{
 							top: 24px;
 						}
 					}
-					button.dropdown-toggle  {
-						background: #fff;
-						color: $text-color;
-						padding: 6px 15px 6px 8px;
-						margin-bottom: 5px;
-						min-width: 127px;
-						position: relative; 
-						text-align: left;
-						border: 1px solid $border-box-color;
-						@include border-radius(5px);
+					.bootstrap-select.btn-group {
+						width: 100%!important; 
+						button {
+							background: #fff;
+							color: $text-color;
+							border: 1px solid $border-box-color;
+							font-size: 18px;
+							padding: 8px 10px;
+							span.caret {
+								top: 43%!important;
+								border-top: 13px solid;
+								border-right: 8px solid transparent;
+								border-left: 8px solid transparent;
+							}
+						}						
 						span.caret {
-							position: absolute;
-							border-top: 13px solid;
-							border-right: 8px solid transparent;
-							border-left: 8px solid transparent;
-							top: 15px;
-							right: 9px;
+							top: 38%;
+							font-size: 18px;
 						}
 					}
 					&:first-child {
@@ -474,10 +475,14 @@ body{
 				overflow-y: hidden;
 				text-overflow: ellipsis;
 				white-space: nowrap;
-				button.dropdown-toggle {
-					width: 122px;
+				.btn-group.bootstrap-select {
+					width: 122px!important;
 					min-width: 122px;
 				}
+			}
+			td:nth-child(n+5) {
+				overflow-y: visible;
+				white-space: normal;
 			}
 		}
 		&.manage-positions {
@@ -508,15 +513,7 @@ body{
 					top: 15px;
 					right: 15px;
 				}
-			}
-			td {
-				.bootstrap-select.btn-group {
-					width: 100%!important; 
-					span.caret {
-						top: 38%;
-					}
-				}
-			}
+			}			
 		}
 	}
 }
