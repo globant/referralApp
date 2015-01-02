@@ -70,26 +70,83 @@ class Login extends Base
 
     }
 
-    public function local_login() {
-        $email = $this->request->getPost('usr_email');
-        $password = md5($this->request->getPost('pass'));
+    public function localLogin() {
+        $sess_user = json_decode($this->session->user);
+        
+        //if there's a user in session already, let the caller know and stop.
+        if (!empty($sess_user)) {
+            $response = array(
+                'success' => false,
+                'message' => "There's already a user with its session opened. Close it to be able to open a new one.",
+            );
+        } else {
+            $email = $this->request->getPost('usr_email');
+            $password = md5($this->request->getPost('pass'));
 
-        $user = User::getUserByCredentials($email, $password);
+            $user = User::getUserByCredentials($email, $password);
+            if (!empty($user)) {
+                //adding the user to session
+                $this->session->set('user', json_encode($user));
+                $response = array(
+                    'success' => true,
+                    'message' => 'Authenticated'
+                );
+            } else {
+                $response = array(
+                    'success' => false,
+                    'message' => 'Invalid username/password'
+                );
+            }
+        
+        }
+        $this->response->setJsonContent($response);
+
+        return $this->response;
+    }
+    
+    public function getCurrentUser() {
+        $user = json_decode($this->session->user);
+        
         if (!empty($user)) {
             $response = array(
                 'success' => true,
-                'message' => 'Authenticated'
+                'message' => 'Ok',
+                'data' => $user,
             );
         } else {
             $response = array(
                 'success' => false,
-                'message' => 'Invalid username/password'
+                'message' => 'No user logged in',
+                'data' => null,
             );
         }
         $this->response->setJsonContent($response);
 
         return $this->response;
     }
+
+    public function localLogout() {
+        $sess_user = json_decode($this->session->user);
+        
+        if (!empty($sess_user)) {
+            $this->session->remove('user');
+            $response = array(
+                'success' => true,
+                'message' => 'User logged out',
+            );
+        } else {
+            $response = array(
+                'success' => false,
+                'message' => 'There is no user logged in.',
+            );
+        }
+        
+        $this->response->setJsonContent($response);
+
+        return $this->response;
+        
+    }
+
     /**
      * Returns false if token is ok
      * @param object $token
