@@ -14,11 +14,14 @@
             interval: 10000000
         });
 
-
-
         $('.switch').on('click',function(){
             $('#comp').toggle();
         });
+        /* Crossbrowser Select look and feel */
+        if($('.selectpicker').length > 0) {
+            $('.selectpicker').selectpicker();
+        }
+       
     });
 
     var helper = (function() {
@@ -92,9 +95,5 @@
                 });
             }
         };
-    })();
-
-    window.signInCallback = function(authResult) {
-        helper.signInCallback(authResult);
-    };
+    })();    
 })(jQuery);

@@ -3,31 +3,44 @@
  * Import this file using the following HTML or equivalent:
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
 /*@import "compass/reset";*/
-@import url(/vendors/css/bootstrap.css);
-@import url(/vendors/css/bootstrap-theme.min.css);
+@import url(../../vendors/css/bootstrap.css);
+@import url(../../vendors/css/bootstrap-theme.min.css);
+@import url(../../vendors/css/bootstrap-select.min.css);
 /*
  * This is for mixings, variables and functions
 */
 @font-face {
   font-family: 'DINCond';
   font-weight: bold;
-  src: url(/vendors/dincond-bold-opentype.otf); }
+  src: url(../../vendors/dincond-bold-opentype.otf);
+}
 @font-face {
   font-family: 'DINCond';
   font-weight: normal;
-  src: url(/vendors/dincond-regular-opentype.otf); }
+  src: url(../../vendors/dincond-regular-opentype.otf);
+}
 @font-face {
   font-family: 'DINCond';
   font-weight: 200;
-  src: url(/vendors/dincond-light-opentype.otf); }
+  src: url(../../vendors/dincond-light-opentype.otf);
+}
 @font-face {
   font-family: 'DIN';
   font-weight: normal;
-  src: url(/vendors/din-regular-opentype.otf); }
+  src: url(../../vendors/din-regular-opentype.otf);
+}
 @font-face {
   font-family: 'DIN';
   font-weight: 200;
-  src: url(/vendors/din-light-opentype.otf); }
+  src: url(../../vendors/din-light-opentype.otf);
+}
+/* This is for positioning the bell, the only extra style you need
+to add are top and left */
+/* Mixin for Placeholder */
+/* Media Queries for big monitors */
+/* Box Shadow */
+/* Rotate */
+/* line 1, sass/_buttons.scss */
 .btn {
   font-family: "DINCond-regular";
   font-size: 22px;
@@ -37,51 +50,61 @@
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   -ms-border-radius: 5px;
-  border-radius: 5px; }
-  .btn:hover, .btn:focus, .btn.focus {
-    color: #ffffff; }
-  .btn.btn-green {
-    background: #bfd52a;
-    /* Old browsers */
-    background: -moz-linear-gradient(top, #bfd52a 62%, #a6b922 100%);
-    /* FF3.6+ */
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(62%, #bfd52a), color-stop(100%, #a6b922));
-    /* Chrome,Safari4+ */
-    background: -webkit-linear-gradient(top, #bfd52a 62%, #a6b922 100%);
-    /* Chrome10+,Safari5.1+ */
-    background: -o-linear-gradient(top, #bfd52a 62%, #a6b922 100%);
-    /* Opera 11.10+ */
-    background: -ms-linear-gradient(top, #bfd52a 62%, #a6b922 100%);
-    /* IE10+ */
-    background: linear-gradient(to bottom, #bfd52a 62%, #a6b922 100%);
-    /* W3C */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#bfd52a', endColorstr='#a6b922',GradientType=0 );
-    /* IE6-9 */ }
-  .btn.btn-blue {
-    background: #bfd52a;
-    /* Old browsers */
-    background: -moz-linear-gradient(top, #bfd52a 62%, #a6b922 100%);
-    /* FF3.6+ */
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(62%, #bfd52a), color-stop(100%, #a6b922));
-    /* Chrome,Safari4+ */
-    background: -webkit-linear-gradient(top, #bfd52a 62%, #a6b922 100%);
-    /* Chrome10+,Safari5.1+ */
-    background: -o-linear-gradient(top, #bfd52a 62%, #a6b922 100%);
-    /* Opera 11.10+ */
-    background: -ms-linear-gradient(top, #bfd52a 62%, #a6b922 100%);
-    /* IE10+ */
-    background: linear-gradient(to bottom, #bfd52a 62%, #a6b922 100%);
-    /* W3C */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#bfd52a', endColorstr='#a6b922',GradientType=0 );
-    /* IE6-9 */ }
+  border-radius: 5px;
+}
+/* line 9, sass/_buttons.scss */
+.btn:hover, .btn:focus, .btn.focus {
+  color: #ffffff;
+}
+/* line 12, sass/_buttons.scss */
+.btn.btn-green {
+  background: #bfd52a;
+  /* Old browsers */
+  background: -moz-linear-gradient(top, #bfd52a 62%, #a6b922 100%);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(62%, #bfd52a), color-stop(100%, #a6b922));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #bfd52a 62%, #a6b922 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, #bfd52a 62%, #a6b922 100%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, #bfd52a 62%, #a6b922 100%);
+  /* IE10+ */
+  background: linear-gradient(to bottom, #bfd52a 62%, #a6b922 100%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#bfd52a', endColorstr='#a6b922',GradientType=0 );
+  /* IE6-9 */
+}
+/* line 22, sass/_buttons.scss */
+.btn.btn-blue {
+  background: #bfd52a;
+  /* Old browsers */
+  background: -moz-linear-gradient(top, #bfd52a 62%, #a6b922 100%);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(62%, #bfd52a), color-stop(100%, #a6b922));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #bfd52a 62%, #a6b922 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, #bfd52a 62%, #a6b922 100%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, #bfd52a 62%, #a6b922 100%);
+  /* IE10+ */
+  background: linear-gradient(to bottom, #bfd52a 62%, #a6b922 100%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#bfd52a', endColorstr='#a6b922',GradientType=0 );
+  /* IE6-9 */
+}
 
+/* line 12, sass/style.scss */
 h1, h2, h3, h4, h5 {
   text-transform: uppercase;
   font-weight: bold;
   color: #525254;
   font-family: 'DINCond';
-  letter-spacing: 0.01em; }
+  letter-spacing: 0.01em;
+}
 
+/* line 19, sass/style.scss */
 body {
   background: #edebec;
   /* Old browsers */
@@ -100,218 +123,1007 @@ body {
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#edebec', endColorstr='#ffffff',GradientType=0);
   /* IE6-9 */
   font-family: 'DINCond';
-  color: #525254; }
-  body header {
-    width: 980px;
-    margin: 0 auto; }
-  body .container {
-    width: 980px;
-    padding: 0; }
-  body .row {
-    margin: 0 auto; }
-  body .btn {
-    font-family: 'DINCond'; }
-
-header .logo {
-  margin: 40px 0px;
+  color: #525254;
+}
+/* line 32, sass/style.scss */
+body header {
+  width: 980px;
+  margin: 0 auto;
+}
+/* line 36, sass/style.scss */
+body .container {
+  width: 980px;
+  padding: 0;
+}
+/* line 40, sass/style.scss */
+body .row {
+  margin: 0 auto;
+}
+/* line 43, sass/style.scss */
+body .btn {
+  font-family: 'DINCond';
+}
+/* line 46, sass/style.scss */
+body .hot {
+  position: relative;
+}
+/* line 49, sass/style.scss */
+body .login {
+  min-height: 700px;
+  background: url("../img/loginback.jpg") no-repeat;
+  padding: 105px 48px;
+  background-size: contain;
+}
+/* line 54, sass/style.scss */
+body .login p {
+  color: #fff;
+  font-family: 'DINCond';
+  font-size: 30px;
+  line-height: 30px;
+  margin: 0 0 25px;
+}
+/* line 60, sass/style.scss */
+body .login p:first-child {
+  margin: 0 0 32px;
+}
+/* line 64, sass/style.scss */
+body .login .login-wrapper {
+  position: relative;
+}
+/* line 67, sass/style.scss */
+body .login .login-wrapper form .form-group {
+  padding: 0 15px;
+}
+/* line 70, sass/style.scss */
+body .login .login-wrapper form input[type="text"],
+body .login .login-wrapper form input[type="password"] {
+  padding: 5px;
+  font-family: 'DINCond';
+  color: #505050;
+  font-size: 18px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  border-radius: 5px;
+  border: 1px solid #ccccce;
+}
+/* line 67, sass/_resources.scss */
+body .login .login-wrapper form input[type="text"].placeholder,
+body .login .login-wrapper form input[type="password"].placeholder {
+  color: #505050;
+}
+/* line 68, sass/_resources.scss */
+body .login .login-wrapper form input[type="text"]:-moz-placeholder,
+body .login .login-wrapper form input[type="password"]:-moz-placeholder {
+  color: #505050;
+}
+/* line 69, sass/_resources.scss */
+body .login .login-wrapper form input[type="text"]::-moz-placeholder,
+body .login .login-wrapper form input[type="password"]::-moz-placeholder {
+  color: #505050;
+}
+/* line 70, sass/_resources.scss */
+body .login .login-wrapper form input[type="text"]:-ms-input-placeholder,
+body .login .login-wrapper form input[type="password"]:-ms-input-placeholder {
+  color: #505050;
+}
+/* line 71, sass/_resources.scss */
+body .login .login-wrapper form input[type="text"]::-webkit-input-placeholder,
+body .login .login-wrapper form input[type="password"]::-webkit-input-placeholder {
+  color: #505050;
+}
+/* line 67, sass/_resources.scss */
+body .login .login-wrapper form input[type="text"]:focus.placeholder,
+body .login .login-wrapper form input[type="password"]:focus.placeholder {
+  color: transparent;
+}
+/* line 68, sass/_resources.scss */
+body .login .login-wrapper form input[type="text"]:focus:-moz-placeholder,
+body .login .login-wrapper form input[type="password"]:focus:-moz-placeholder {
+  color: transparent;
+}
+/* line 69, sass/_resources.scss */
+body .login .login-wrapper form input[type="text"]:focus::-moz-placeholder,
+body .login .login-wrapper form input[type="password"]:focus::-moz-placeholder {
+  color: transparent;
+}
+/* line 70, sass/_resources.scss */
+body .login .login-wrapper form input[type="text"]:focus:-ms-input-placeholder,
+body .login .login-wrapper form input[type="password"]:focus:-ms-input-placeholder {
+  color: transparent;
+}
+/* line 71, sass/_resources.scss */
+body .login .login-wrapper form input[type="text"]:focus::-webkit-input-placeholder,
+body .login .login-wrapper form input[type="password"]:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+/* line 87, sass/style.scss */
+body .login .login-wrapper form button.btn-green {
+  margin: 15px 0 0;
+  font-size: 20px;
+}
+/* line 93, sass/style.scss */
+body .login .login-wrapper #login-btn {
+  position: absolute;
+  bottom: -11px;
+  right: 107px;
+}
+/* line 100, sass/style.scss */
+body .referafriend {
+  min-height: 600px;
+}
+@media (min-width: 1480px) {
+  /* line 100, sass/style.scss */
+  body .referafriend {
+    min-height: 750px;
+  }
+}
+/* line 105, sass/style.scss */
+body .referafriend button.dropdown-toggle {
+  background: #fff;
+  color: #505050;
+  padding: 6px 15px 6px 8px;
+  margin-bottom: 5px;
+  min-width: 173px;
+  position: relative;
+  text-align: left;
+}
+/* line 113, sass/style.scss */
+body .referafriend button.dropdown-toggle span.caret {
+  position: absolute;
+  border-top: 13px solid;
+  border-right: 8px solid transparent;
+  border-left: 8px solid transparent;
+  top: 15px;
+  right: 9px;
+}
+/* line 122, sass/style.scss */
+body .referafriend form {
+  margin: 32px 0 0;
+}
+/* line 124, sass/style.scss */
+body .referafriend form legend {
+  font-family: 'DINCond';
+  font-size: 24px;
+  background: #e8eaec;
+  border: 1px solid #ccccce;
+  color: #505050;
+  padding: 14px 12px;
+  margin: 0 0 32px;
+}
+/* line 133, sass/style.scss */
+body .referafriend form .form-group {
+  margin-bottom: 23px;
+}
+/* line 135, sass/style.scss */
+body .referafriend form .form-group label,
+body .referafriend form .form-group p.label {
   display: block;
-  width: 275px;
+  font-family: 'DINCond';
+  font-size: 18px;
+  color: #505050;
+  text-rendering: optimizeLegibility;
+  padding-left: 5px;
+  text-align: left;
+  clear: left;
+}
+/* line 146, sass/style.scss */
+body .referafriend form .form-group input[type="text"],
+body .referafriend form .form-group input[type="email"],
+body .referafriend form .form-group button.selectpicker, body .referafriend form .form-group textarea {
+  border: 1px solid #ccccce;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  border-radius: 5px;
+  width: 300px;
+  padding: 7px 5px;
+  font-family: 'DINCond';
+  font-size: 18px;
+  color: #505050;
+}
+/* line 157, sass/style.scss */
+body .referafriend form .form-group input[type="radio"] {
+  display: inline-block;
+  margin-right: 5px;
+}
+/* line 160, sass/style.scss */
+body .referafriend form .form-group input[type="radio"] + label {
+  width: 40px;
+  display: inline-block;
+}
+/* line 165, sass/style.scss */
+body .referafriend form .form-group .right, body .referafriend form .form-group .left {
+  float: left;
+  width: 80px;
+}
+/* line 169, sass/style.scss */
+body .referafriend form .form-group button.selectpicker {
+  width: 173px;
+  position: relative;
+}
+/* line 172, sass/style.scss */
+body .referafriend form .form-group button.selectpicker span.caret {
+  position: absolute;
+  top: 15px;
+  right: 10px;
+  color: #858585;
+}
+/* line 180, sass/style.scss */
+body .referafriend form .form-group button.selectpicker .dropdown-menu li a {
+  font-family: 'DINCond';
+  font-size: 18px;
+  color: #505050;
+}
+/* line 188, sass/style.scss */
+body .referafriend form .form-group.fileupload {
+  position: relative;
+}
+/* line 190, sass/style.scss */
+body .referafriend form .form-group.fileupload .btn-upload {
+  position: absolute;
+  top: -1px;
+  left: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  border-radius: 5px;
+}
+/* line 196, sass/style.scss */
+body .referafriend form .form-group.fileupload input[type="file"] {
+  opacity: 0;
+  width: 104px;
+  margin-left: 6px;
+  height: 31px;
+}
+/* line 202, sass/style.scss */
+body .referafriend form .form-group.fileupload button[type="submit"] {
+  position: absolute;
+  top: -1px;
+  left: 208px;
+}
+/* line 208, sass/style.scss */
+body .referafriend form .form-group p {
+  margin-bottom: 23px;
+}
+/* line 210, sass/style.scss */
+body .referafriend form .form-group p a.data-type {
+  font-family: 'DINCond';
+  font-size: 18px;
+  color: #505050;
+}
+/* line 214, sass/style.scss */
+body .referafriend form .form-group p a.data-type:before {
+  content: "";
+  width: 32px;
+  height: 32px;
+  display: inline-block;
+  position: relative;
+  top: 9px;
+  background: url("../img/doctypesprite.png") no-repeat;
+}
+/* line 223, sass/style.scss */
+body .referafriend form .form-group p a.data-type[href$="pdf"]:before {
+  background-position: -10px -42px;
+}
+/* line 226, sass/style.scss */
+body .referafriend form .form-group p a.data-type[href$="doc"]:before, body .referafriend form .form-group p a.data-type[href$="docx"]:before {
+  background-position: -52px -0px;
+}
+/* line 229, sass/style.scss */
+body .referafriend form .form-group p a.data-type[href$="psd"]:before {
+  background-position: -52px -42px;
+}
+/* line 232, sass/style.scss */
+body .referafriend form .form-group p a.data-type[href$="ai"]:before {
+  background-position: -10px -0px;
+}
+/* line 237, sass/style.scss */
+body .referafriend form .form-group .save {
+  margin-right: 66px;
+}
+/* line 243, sass/style.scss */
+body .myprofile {
+  min-height: 600px;
+}
+@media (min-width: 1480px) {
+  /* line 243, sass/style.scss */
+  body .myprofile {
+    min-height: 750px;
+  }
+}
+/* line 248, sass/style.scss */
+body .myprofile .profile {
+  background: #e8eaec;
+  border: 1px solid #cfcfd1;
+  padding: 4px 3px;
+  margin-bottom: 93px;
+  -webkit-box-shadow: 0px 3px 9px #e1e0e1;
+  -moz-box-shadow: 0px 3px 9px #e1e0e1;
+  box-shadow: 0px 3px 9px #e1e0e1;
+}
+/* line 254, sass/style.scss */
+body .myprofile .profile .col-md-2 {
+  padding-left: 0;
+  padding-right: 0;
+}
+/* line 257, sass/style.scss */
+body .myprofile .profile .col-md-2 img {
+  margin: 0 auto;
+  max-width: 150px;
+}
+/* line 262, sass/style.scss */
+body .myprofile .profile h2 {
+  color: #505050;
+  border-bottom: 2px solid #cfcfd1;
+  text-transform: none;
+  padding-bottom: 3px;
+  margin-bottom: 24px;
+}
+/* line 269, sass/style.scss */
+body .myprofile .profile p {
+  display: inline-block;
+  font-size: 24px;
+  color: #ec008c;
+}
+/* line 273, sass/style.scss */
+body .myprofile .profile p.referrals {
+  width: 20%;
+}
+/* line 276, sass/style.scss */
+body .myprofile .profile p.points {
+  width: 54%;
+}
+/* line 282, sass/style.scss */
+body .myprofile #recent-position h2 {
+  width: 80%;
+  display: inline-block;
+  font-size: 32px;
+  margin-bottom: 30px;
+}
+/* line 288, sass/style.scss */
+body .myprofile #recent-position a.btn {
+  margin-bottom: 22px;
+}
+/* line 291, sass/style.scss */
+body .myprofile #recent-position table {
+  margin-bottom: 150px;
+}
+/* line 294, sass/style.scss */
+body .myprofile #recent-position table tr td {
+  padding-left: 10px;
+}
+/* line 296, sass/style.scss */
+body .myprofile #recent-position table tr td.hightlighted {
+  color: #ec008c;
+}
+/* line 304, sass/style.scss */
+body .hrhome {
+  min-height: 600px;
+}
+@media (min-width: 1480px) {
+  /* line 304, sass/style.scss */
+  body .hrhome {
+    min-height: 750px;
+  }
+}
+/* line 309, sass/style.scss */
+body .hrhome ul.status {
+  padding: 0;
+  list-style: none;
+  border: 1px solid #cfcfd1;
+  padding: 15px 17px;
+  background: #e9e8e8;
+  margin: 0 0 46px;
+}
+/* line 316, sass/style.scss */
+body .hrhome ul.status li {
+  font-family: 'DINCond';
+  font-size: 18px;
+  color: #505050;
+  display: inline-block;
+  margin: 0 0 0 42px;
+}
+/* line 322, sass/style.scss */
+body .hrhome ul.status li:first-child {
+  font-weight: bold;
+  margin-left: 0;
+}
+/* line 328, sass/style.scss */
+body .hrhome h2 {
+  color: #505050;
+  font-size: 32px;
+  margin: 0 0 30px;
+}
+/* line 332, sass/style.scss */
+body .hrhome h2 form {
+  position: relative;
+}
+/* line 334, sass/style.scss */
+body .hrhome h2 form input[type="text"] {
+  width: 195px;
+  background: #e9e8e8;
+  border: 2px solid #cbccd0;
+  height: 46px;
+  font-size: 20px;
+  color: #505050;
+  margin-left: 45px;
+  padding-left: 5px;
+}
+/* line 344, sass/style.scss */
+body .hrhome h2 form input[type="submit"] {
+  position: absolute;
+  right: 2px;
+  top: 2px;
+  height: 42px;
+  width: 48px;
+  border: 1px solid #ccccce;
+  background: url("../img/searchsubmit.png") center center no-repeat #909090;
+  text-indent: -9999px;
+}
+/* line 357, sass/style.scss */
+body .hrhome h2 span a {
+  font-family: 'DIN';
+  font-size: 17px;
+  color: #9999a0;
+  font-weight: 100;
+}
+/* line 362, sass/style.scss */
+body .hrhome h2 span a:before {
+  content: "|";
+  margin: 0 10px 0 7px;
+}
+/* line 367, sass/style.scss */
+body .hrhome h2 span a:first-child:before {
+  display: none;
+}
+/* line 374, sass/style.scss */
+body .hrhome .view-all {
+  padding: 0px 40px;
+  margin: 15px 0 60px;
+}
+/* line 379, sass/style.scss */
+body div.status-data {
+  width: 16px;
+  height: 16px;
+  border: 1px solid #cfcfd1;
+  -webkit-border-radius: 9px;
+  -moz-border-radius: 9px;
+  -ms-border-radius: 9px;
+  border-radius: 9px;
+  display: inline-block;
+  margin: 0 12px 0 0;
+  position: relative;
+  top: 2px;
+}
+/* line 387, sass/style.scss */
+body div.status-data.twodays {
+  background: #ff0000;
+}
+/* line 390, sass/style.scss */
+body div.status-data.oneday {
+  background: #f6ff00;
+}
+/* line 393, sass/style.scss */
+body div.status-data.new {
+  background: #1ebd04;
+}
+/* line 396, sass/style.scss */
+body div.status-data.reviewed {
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  -ms-border-radius: 0px;
+  border-radius: 0px;
+  top: 0;
+  border: none;
+  background: url("../img/reviewed.png") no-repeat;
+}
+/* line 403, sass/style.scss */
+body table {
+  width: 100%;
+}
+/* line 406, sass/style.scss */
+body table thead tr {
+  border: 1px solid #ccccce;
+}
+/* line 408, sass/style.scss */
+body table thead tr th {
+  font-family: 'DINCond';
+  font-size: 24px;
+  color: #505050;
+  background: #e8eaec;
+  padding: 20px 0 12px 20px;
+  text-transform: uppercase;
+}
+/* line 415, sass/style.scss */
+body table thead tr th:first-child {
+  padding-left: 44px;
+}
+/* line 423, sass/style.scss */
+body table tbody tr td {
+  padding: 10px 20px;
+  font-size: 18px;
+  border-bottom: 2px solid #D4D3D9;
+  position: relative;
+  vertical-align: middle !important;
+}
+/* line 429, sass/style.scss */
+body table tbody tr td div.status-data {
+  position: absolute;
+  left: 10px;
+  top: 31px;
+}
+/* line 433, sass/style.scss */
+body table tbody tr td div.status-data.reviewed {
+  position: absolute;
+  top: 24px;
+}
+/* line 438, sass/style.scss */
+body table tbody tr td .bootstrap-select.btn-group {
+  width: 100% !important;
+}
+/* line 440, sass/style.scss */
+body table tbody tr td .bootstrap-select.btn-group button {
+  background: #fff;
+  color: #505050;
+  border: 1px solid #cfcfd1;
+  font-size: 18px;
+  padding: 8px 10px;
+}
+/* line 446, sass/style.scss */
+body table tbody tr td .bootstrap-select.btn-group button span.caret {
+  top: 43% !important;
+  border-top: 13px solid;
+  border-right: 8px solid transparent;
+  border-left: 8px solid transparent;
+}
+/* line 453, sass/style.scss */
+body table tbody tr td .bootstrap-select.btn-group span.caret {
+  top: 38%;
+  font-size: 18px;
+}
+/* line 458, sass/style.scss */
+body table tbody tr td:first-child {
+  padding-left: 44px;
+  max-width: 164px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+/* line 469, sass/style.scss */
+body table.report td {
+  max-width: 130px;
+  overflow-y: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+/* line 474, sass/style.scss */
+body table.report td .btn-group.bootstrap-select {
+  width: 122px !important;
+  min-width: 122px;
+}
+/* line 479, sass/style.scss */
+body table.report td:nth-child(n+5) {
+  overflow-y: visible;
+  white-space: normal;
+}
+/* line 484, sass/style.scss */
+body table.manage-positions {
+  max-width: 980px;
+}
+/* line 486, sass/style.scss */
+body table.manage-positions th:first-child, body table.manage-positions td:first-child {
+  padding-left: 15px;
+}
+/* line 490, sass/style.scss */
+body table.manage-positions th:nth-chidl(n+3), body table.manage-positions td:nth-child(n+3) {
+  max-width: auto;
+  width: 205px;
+}
+/* line 494, sass/style.scss */
+body table.manage-positions th:nth-child(n+4), body table.manage-positions td:nth-child(n+4) {
+  text-align: center;
+  width: 167px;
+  text-transform: uppercase;
+}
+/* line 499, sass/style.scss */
+body table.manage-positions th:last-child, body table.manage-positions td:last-child {
+  width: 147px;
+}
+/* line 502, sass/style.scss */
+body table.manage-positions th {
+  position: relative;
+}
+/* line 504, sass/style.scss */
+body table.manage-positions th .caret {
+  position: absolute;
+  border-top: 13px solid;
+  border-right: 8px solid transparent;
+  border-left: 8px solid transparent;
+  top: 15px;
+  right: 15px;
+}
+/* line 514, sass/style.scss */
+body table.manage-positions th.filter.selected .caret {
+  -moz-transform: rotate(-180deg);
+  -o-transform: rotate(-180deg);
+  -ms-transform: rotate(-180deg);
+  -webkit-transform: rotate(-180deg);
+  transform: rotate(-180deg);
+}
+
+/* line 523, sass/style.scss */
+header .logo {
+  margin: 40px 0 40px -20px;
+  display: inline-block;
+  width: 240px;
   height: 60px;
-  background-image: url("../img/logo-globant.png");
+  background-image: url("../img/logo-positivo-300.png");
   background-repeat: no-repeat;
-  background-size: contain; }
+  background-size: contain;
+}
+/* line 531, sass/style.scss */
+header .logo + h1 {
+  display: inline-block;
+  font-family: 'DINCond';
+  font-weight: 200;
+  text-transform: none;
+  font-size: 24px;
+  position: relative;
+  top: -64px;
+}
+/* line 539, sass/style.scss */
+header .logo + h1:before {
+  content: "|";
+  font-size: 24px;
+  margin: 0 16px 0 0;
+  position: relative;
+  top: 0;
+}
+/* line 548, sass/style.scss */
 header .links {
-  list-style-type: none; }
-  header .links li {
-    display: inline-block; }
-    header .links li a {
-      display: block;
-      padding: 5px 10px;
-      font-size: 17px;
-      font-weight: 200;
-      font-family: 'DIN';
-      text-transform: uppercase;
-      background-color: #ffffff;
-      border-radius: 5px;
-      color: #cbccd0; }
-      header .links li a:hover {
-        text-decoration: none; }
+  list-style-type: none;
+  margin: 56px 0 0;
+}
+/* line 551, sass/style.scss */
+header .links li {
+  display: inline-block;
+  margin: 0 0 0 15px;
+}
+/* line 554, sass/style.scss */
+header .links li a {
+  display: block;
+  padding: 5px 10px;
+  font-size: 17px;
+  font-weight: 200;
+  font-family: 'DIN';
+  text-transform: uppercase;
+  color: #9999a0;
+  text-decoration: none;
+}
+/* line 563, sass/style.scss */
+header .links li a.active {
+  background-color: #ffffff;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  border-radius: 5px;
+}
+/* line 567, sass/style.scss */
+header .links li a:hover {
+  text-decoration: none;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  border-radius: 5px;
+  background: rgba(255, 255, 255, 0.5);
+}
 
+/* line 576, sass/style.scss */
 .bs-docs-container {
-  margin-top: 5px; }
+  margin-top: 5px;
+}
 
+/* line 579, sass/style.scss */
 #hot-positions {
-  padding: 0 16px 0 0; }
-  #hot-positions .head {
-    background: #e5e3e4;
-    /* Old browsers */
-    background: -moz-linear-gradient(top, #e5e3e4 0%, #cbccd0 100%);
-    /* FF3.6+ */
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #e5e3e4), color-stop(100%, #cbccd0));
-    /* Chrome,Safari4+ */
-    background: -webkit-linear-gradient(top, #e5e3e4 0%, #cbccd0 100%);
-    /* Chrome10+,Safari5.1+ */
-    background: -o-linear-gradient(top, #e5e3e4 0%, #cbccd0 100%);
-    /* Opera 11.10+ */
-    background: -ms-linear-gradient(top, #e5e3e4 0%, #cbccd0 100%);
-    /* IE10+ */
-    background: linear-gradient(to bottom, #e5e3e4 0%, #cbccd0 100%);
-    /* W3C */
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#e5e3e4', endColorstr='#cbccd0',GradientType=0);
-    /* IE6-9 */
-    padding: 0px 47px;
-    border: 1px solid #cbccd0; }
-    #hot-positions .head h2 {
-      font-size: 31px;
-      margin: 0px;
-      letter-spacing: -0.2px; }
-    #hot-positions .head p {
-      color: #525254;
-      font-size: 20px;
-      letter-spacing: 0.01em;
-      margin: 0px; }
-  #hot-positions .content {
-    background-color: #e9eaee;
-    padding: 20px 80px 10px;
-    border: 1px solid #cbccd0;
-    border-top: 0; }
-    #hot-positions .content .carousel a.left,
-    #hot-positions .content .carousel a.right {
-      background: url("../img/icon-sprite.png") no-repeat transparent;
-      width: 40px;
-      height: 40px;
-      top: 50%;
-      margin-top: -20px; }
-    #hot-positions .content .carousel a.left {
-      left: -65px;
-      background-position: 0px -26px; }
-    #hot-positions .content .carousel a.right {
-      right: -65px;
-      background-position: -42px -26px; }
-    #hot-positions .content .carousel .carousel-inner .item {
-      width: 450px;
-      margin: 0px auto; }
-      #hot-positions .content .carousel .carousel-inner .item.active {
-        display: block; }
-      #hot-positions .content .carousel .carousel-inner .item h3 {
-        font-size: 24px;
-        font-weight: normal;
-        line-height: 23px;
-        margin: 0px;
-        text-transform: uppercase; }
-      #hot-positions .content .carousel .carousel-inner .item .location:before {
-        content: " ";
-        width: 20px;
-        height: 22px;
-        margin-right: 5px;
-        display: inline-block;
-        background: url("../img/icon-sprite.png") top left no-repeat transparent; }
-      #hot-positions .content .carousel .carousel-inner .item .seniority {
-        margin-left: 28px; }
-        #hot-positions .content .carousel .carousel-inner .item .seniority:before {
-          content: " ";
-          width: 20px;
-          height: 22px;
-          margin-right: 5px;
-          display: inline-block;
-          background: url("../img/icon-sprite.png") -24px 0 no-repeat transparent; }
-      #hot-positions .content .carousel .carousel-inner .item .location, #hot-positions .content .carousel .carousel-inner .item .seniority {
-        color: #525254;
-        margin-top: 10px;
-        display: inline-block;
-        font-size: 23px; }
-      #hot-positions .content .carousel .carousel-inner .item .btn {
-        position: absolute;
-        top: 26px;
-        right: 0px; }
-    #hot-positions .content .carousel .carousel-indicators {
-      position: static;
-      margin: 10px auto 5px; }
-      #hot-positions .content .carousel .carousel-indicators li {
-        width: 14px;
-        height: 14px;
-        margin-right: 11px;
-        border: 1px solid #d8d8da;
-        background-color: #d8d8da; }
-        #hot-positions .content .carousel .carousel-indicators li.active {
-          border: 1px solid #bab9be;
-          background-color: #bab9be; }
+  padding: 0 16px 0 0;
+}
+/* line 582, sass/style.scss */
+#hot-positions .head {
+  background: #e5e3e4;
+  /* Old browsers */
+  background: -moz-linear-gradient(top, #e5e3e4 0%, #cbccd0 100%);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #e5e3e4), color-stop(100%, #cbccd0));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #e5e3e4 0%, #cbccd0 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, #e5e3e4 0%, #cbccd0 100%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, #e5e3e4 0%, #cbccd0 100%);
+  /* IE10+ */
+  background: linear-gradient(to bottom, #e5e3e4 0%, #cbccd0 100%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#e5e3e4', endColorstr='#cbccd0',GradientType=0);
+  /* IE6-9 */
+  padding: 0px 47px;
+  border: 1px solid #cbccd0;
+}
+/* line 595, sass/style.scss */
+#hot-positions .head h2 {
+  font-size: 31px;
+  margin: 0px;
+  letter-spacing: -0.2px;
+}
+/* line 600, sass/style.scss */
+#hot-positions .head p {
+  color: #525254;
+  font-size: 20px;
+  letter-spacing: 0.01em;
+  margin: 0px;
+}
+/* line 607, sass/style.scss */
+#hot-positions .content {
+  background-color: #e9eaee;
+  padding: 20px 80px 10px;
+  border: 1px solid #cbccd0;
+  border-top: 0;
+}
+/* line 614, sass/style.scss */
+#hot-positions .content .carousel a.left,
+#hot-positions .content .carousel a.right {
+  background: url("../img/icon-sprite.png") no-repeat transparent;
+  width: 40px;
+  height: 40px;
+  top: 50%;
+  margin-top: -20px;
+}
+/* line 621, sass/style.scss */
+#hot-positions .content .carousel a.left {
+  left: -65px;
+  background-position: 0px -26px;
+}
+/* line 625, sass/style.scss */
+#hot-positions .content .carousel a.right {
+  right: -65px;
+  background-position: -42px -26px;
+}
+/* line 630, sass/style.scss */
+#hot-positions .content .carousel .carousel-inner .item {
+  width: 450px;
+  margin: 0px auto;
+}
+/* line 634, sass/style.scss */
+#hot-positions .content .carousel .carousel-inner .item.active {
+  display: block;
+}
+/* line 637, sass/style.scss */
+#hot-positions .content .carousel .carousel-inner .item h3 {
+  font-size: 24px;
+  font-weight: normal;
+  line-height: 23px;
+  margin: 0 0 0 20px;
+  text-transform: uppercase;
+}
+/* line 644, sass/style.scss */
+#hot-positions .content .carousel .carousel-inner .item h3.hot:before {
+  content: " ";
+  background: url("../img/footersocialsprite.png") no-repeat 0 -120px;
+  display: inline-block;
+  height: 30px;
+  width: 30px;
+  position: absolute;
+  left: -28px;
+  top: -5px;
+}
+/* line 651, sass/style.scss */
+#hot-positions .content .carousel .carousel-inner .item .location {
+  margin-left: 20px;
+}
+/* line 653, sass/style.scss */
+#hot-positions .content .carousel .carousel-inner .item .location:before {
+  content: " ";
+  width: 20px;
+  height: 22px;
+  margin-right: 5px;
+  display: inline-block;
+  background: url("../img/icon-sprite.png") top left no-repeat transparent;
+}
+/* line 662, sass/style.scss */
+#hot-positions .content .carousel .carousel-inner .item .seniority {
+  margin-left: 28px;
+}
+/* line 665, sass/style.scss */
+#hot-positions .content .carousel .carousel-inner .item .seniority:before {
+  content: " ";
+  width: 20px;
+  height: 22px;
+  margin-right: 5px;
+  display: inline-block;
+  background: url("../img/icon-sprite.png") -24px 0 no-repeat transparent;
+}
+/* line 674, sass/style.scss */
+#hot-positions .content .carousel .carousel-inner .item .location, #hot-positions .content .carousel .carousel-inner .item .seniority {
+  color: #525254;
+  margin-top: 10px;
+  display: inline-block;
+  font-size: 23px;
+}
+/* line 680, sass/style.scss */
+#hot-positions .content .carousel .carousel-inner .item .btn {
+  position: absolute;
+  top: 26px;
+  right: 0px;
+}
+/* line 687, sass/style.scss */
+#hot-positions .content .carousel .carousel-indicators {
+  position: static;
+  margin: 10px auto 5px;
+}
+/* line 691, sass/style.scss */
+#hot-positions .content .carousel .carousel-indicators li {
+  width: 14px;
+  height: 14px;
+  margin-right: 11px;
+  border: 1px solid #d8d8da;
+  background-color: #d8d8da;
+}
+/* line 696, sass/style.scss */
+#hot-positions .content .carousel .carousel-indicators li.active {
+  border: 1px solid #bab9be;
+  background-color: #bab9be;
+}
 
+/* line 705, sass/style.scss */
 #top-globers {
-  padding: 0; }
-  #top-globers h2 {
-    font-size: 25px;
-    margin: 0px; }
-  #top-globers ul {
-    padding: 0px; }
-    #top-globers ul li {
-      border-bottom: 2px solid #d4d3d9;
-      padding: 6px 25px 6px 0px;
-      overflow: hidden; }
-      #top-globers ul li p {
-        font-size: 18px;
-        float: left;
-        margin-bottom: 0px; }
-      #top-globers ul li span {
-        color: #e61191;
-        float: right;
-        font-size: 20px; }
+  padding: 0;
+}
+/* line 708, sass/style.scss */
+#top-globers h2 {
+  font-size: 25px;
+  margin: 0px;
+}
+/* line 712, sass/style.scss */
+#top-globers ul {
+  padding: 0px;
+}
+/* line 715, sass/style.scss */
+#top-globers ul li {
+  border-bottom: 2px solid #d4d3d9;
+  padding: 6px 25px 6px 0px;
+  overflow: hidden;
+}
+/* line 720, sass/style.scss */
+#top-globers ul li p {
+  font-size: 18px;
+  float: left;
+  margin-bottom: 0px;
+}
+/* line 725, sass/style.scss */
+#top-globers ul li span {
+  color: #e61191;
+  float: right;
+  font-size: 20px;
+}
 
+/* line 733, sass/style.scss */
 #recent-position {
-  padding: 0px; }
-  #recent-position table {
-    width: 100%; }
-    #recent-position table thead tr {
-      border: 1px solid #cbccd0;
-      text-transform: uppercase;
-      background-color: #e9eaee; }
-      #recent-position table thead tr th {
-        padding: 5px 0px 0px 10px;
-        font-size: 23px;
-        font-weight: normal; }
-    #recent-position table tbody tr td {
-      padding: 10px 20px;
-      font-size: 18px;
-      border-bottom: 2px solid #d4d3d9; }
-      #recent-position table tbody tr td .btn {
-        font-size: 24px;
-        vertical-align: middle; }
-  #recent-position .view-all {
-    padding: 0px 40px;
-    margin-top: 15px; }
+  padding: 0px;
+}
+/* line 736, sass/style.scss */
+#recent-position table {
+  width: 100%;
+}
+/* line 739, sass/style.scss */
+#recent-position table thead tr {
+  border: 1px solid #cbccd0;
+  text-transform: uppercase;
+  background-color: #e9eaee;
+}
+/* line 744, sass/style.scss */
+#recent-position table thead tr th {
+  padding: 5px 0px 0px 10px;
+  font-size: 23px;
+  font-weight: normal;
+}
+/* line 752, sass/style.scss */
+#recent-position table tbody tr td {
+  padding: 10px 20px;
+  font-size: 18px;
+  border-bottom: 2px solid #d4d3d9;
+}
+/* line 757, sass/style.scss */
+#recent-position table tbody tr td.hot:before {
+  content: " ";
+  background: url("../img/footersocialsprite.png") no-repeat 0 -120px;
+  display: inline-block;
+  height: 30px;
+  width: 30px;
+  position: absolute;
+  top: 12px;
+  left: -7px;
+}
+/* line 763, sass/style.scss */
+#recent-position table tbody tr td .btn {
+  font-size: 24px;
+  vertical-align: middle;
+}
+/* line 771, sass/style.scss */
+#recent-position .view-all {
+  padding: 0px 40px;
+  margin-top: 15px;
+}
 
+/* line 776, sass/style.scss */
 #extra-referral {
   padding: 15px 10px;
   margin: 50px 0px;
   background-color: #e9eaee;
-  font-size: 23px; }
-  #extra-referral p {
-    margin: 0px; }
-  #extra-referral .refer-now {
-    padding: 0px 30px;
-    position: absolute;
-    right: 15px;
-    top: 50%;
-    margin-top: -15px; }
+  font-size: 23px;
+}
+/* line 782, sass/style.scss */
+#extra-referral p {
+  margin: 0px;
+}
+/* line 785, sass/style.scss */
+#extra-referral .refer-now {
+  padding: 0px 30px;
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  margin-top: -15px;
+}
 
+/* line 793, sass/style.scss */
 footer {
   padding: 20px 10px;
-  background-color: #e5e3e4; }
-  footer .copyright {
-    font-family: Arial;
-    font-size: 23px; }
+  background-color: #d4d3d3;
+}
+/* line 797, sass/style.scss */
+footer .social a {
+  display: block;
+  width: 40px;
+  height: 40px;
+  background: url("../img/footersocialsprite.png") no-repeat;
+  text-indent: -9999px;
+  float: left;
+  margin: 0 0 0 15px;
+}
+/* line 805, sass/style.scss */
+footer .social a.twitter {
+  background-position: 0 -80px;
+}
+/* line 808, sass/style.scss */
+footer .social a.facebook {
+  background-position: 0 0;
+}
+/* line 811, sass/style.scss */
+footer .social a.linkedin {
+  background-position: 0 -40px;
+}
+/* line 815, sass/style.scss */
+footer .social .copyright {
+  font-family: 'DIN';
+  font-size: 23px;
+  display: inline-block;
+  width: 200px;
+  margin: 0 0 0 25px;
+  line-height: 40px;
+}
 
+/* line 825, sass/style.scss */
 div#comp {
   display: none;
   opacity: .5;
   position: absolute;
   top: 0;
-  left: -15px; }
+  left: -15px;
+}
 
+/* line 832, sass/style.scss */
 .switch {
   position: absolute;
   top: 10px;
   left: 10px;
-  z-index: 10000; }
-
-/*# sourceMappingURL=style.css.map */
+  z-index: 10000;
+}
