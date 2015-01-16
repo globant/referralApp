@@ -18,6 +18,7 @@ class App
         $app->get('/current-user', array(new \Routes\Login($di), 'getCurrentUser'));
         $app->get('/users', array(new \Routes\User($di), 'get'));
         $app->get('/positions', array(new \Routes\Positions($di), 'get'));
+        $app->post('/referral', array(new \Routes\Referral($di), 'insert'));
 
 
         $app->handle();
