@@ -1,0 +1,87 @@
+<div class="container bs-docs-container"><!-- ng-controller="mainPageCtrl"-->
+	<div class="row">
+		<section id='hot-positions' class="col-md-8"><!-- ng-controller="HotPositionsCtrl"-->
+			<div class="head">
+				<h2>{{hotPosName}}</h2>
+				<p>Refer your friends and earn points</p>
+			</div>
+			<div class="content" >
+				<div id="carousel" class="carousel slide" data-ride="carousel">
+					<!-- Wrapper for slides -->
+					<div class="carousel-inner">
+						<div ng-repeat="HotPos in hotPositionList" class="item {{$index == 0 ? 'active' : ''}}">
+							<h3>{{HotPos.name}}</h3>
+							<span class="location">{{HotPos.location}}</span>
+							<span class="seniority">{{HotPos.seniority}}</span>
+							<a href="#/referalfriend.html" class="btn btn-green">Refer a friend</a>
+						</div>
+					</div>
+					<!-- controls -->
+					<a href="#carousel" class="carousel-control left" role="button" data-slide="prev"></a>
+					<a href="#carousel" class="carousel-control right" role="button" data-slide="next"></a>
+
+					<!-- Indicators -->
+				    <ol class="carousel-indicators">
+						<li ng-repeat="HotPos in hotPositionList" data-target="#carousel" data-slide-to="{{$index}}" class="{{$index == 0 ? 'active' : ''}}"></li>
+				    </ol>
+				</div>
+			</div>
+		</section>
+		<section id='top-globers' class="col-md-4">
+			<h2>top globers - q1</h2>
+			<ul>
+				<li>
+					<p>Ana Marafiga (Brazil)</p>
+					<span>3120 pts</span>
+				</li>
+				<li>
+					<p>Thiago Higa (Argentina)</p>
+					<span>520 pts</span>
+				</li>
+				<li>
+					<p>Juliano Dias (USA)</p>
+					<span>120 pts</span>
+				</li>
+				<li>
+					<p>Juliano Dias (Argentina)</p>
+					<span>120 pts</span>
+				</li>
+			</ul>
+		</section>
+	</div>
+
+	<div class="row">
+		<section id='recent-position' class="col-md-12" ><!--ng-view="PositionsCtrl"-->
+			<h2>{{posName}}</h2>
+			<table>
+	            <thead>
+					<tr>
+						<th>Position</th>
+						<th>Location</th>
+						<th>Seniority</th>
+						<th></th>
+					</tr>
+				</thead>
+	            <tbody>
+	            	<tr ng-repeat="i in positionList">
+		            	<td>{{i.name}}</td>
+		            	<td>{{i.location}}</td>
+		            	<td>{{i.seniority}}</td>
+		            	<td class="text-right"><a href="#/referalfriend.html" class="btn btn-green">Refer a friend</a></td>
+		            </tr>
+	            </tbody>
+	        </table>
+			<a href="#" class="view-all btn btn-info">View All</a>
+		</section>
+	</div>
+
+	<div class="row">
+		<section id="extra-referral" class="col-md-12">
+			<div class="content pull-left">
+				<p>Didn't find a position that suits your friends?</p>
+				<p>Send them to our waiting list, so as soon a position opens up, we can talk to them first.</p>
+			</div>
+			<a href="#" class="refer-now btn btn-info">Refer now</a>
+		</section>
+	</div>
+</div>

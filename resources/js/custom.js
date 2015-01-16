@@ -10,10 +10,6 @@
             helper.testLocalLogin();
         })
 
-        $('#carousel').carousel({
-            interval: 10000000
-        });
-
         $('.switch').on('click',function(){
             $('#comp').toggle();
         });
@@ -21,9 +17,15 @@
         if($('.selectpicker').length > 0) {
             $('.selectpicker').selectpicker();
         }
+        $('.carousel-control').on('click',function(e){
+            e.preventDefault();
+        })
+        $('#carousel').on('click',function(e){
+
+            e.stopPropagation();
+        })
        
     });
-
     var helper = (function() {
         var $loginBtn = $('#login-btn');
         var $logoutBtn = $('#logout-btn');
@@ -94,6 +96,6 @@
                     }
                 });
             }
-        };
-    })();    
+        }
+    })(); 
 })(jQuery);
