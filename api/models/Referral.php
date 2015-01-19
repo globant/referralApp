@@ -48,10 +48,26 @@ class Referral extends \Phalcon\Mvc\Model
     /**
      * @Column(type="string", length=100, nullable=true)
      */
-    public $cv_path;
+    public $cvPath;
     
     public function initialize() {
         $this->hasOne('eid', 'Models\EnglishProficiency', 'id', array('alias' => 'englishProficiency'));
+    }
+    
+    public function columnMap() {
+        return array(
+            'id' => 'id',
+            'name' => 'name',
+            'email' => 'email',
+            'linkedin' => 'linkedin',
+            'portfolio' => 'portfolio',
+            'technology' => 'technology',
+            'eid' => 'eid',
+            'country' => 'country',
+            'city' => 'city',
+            'why_good_referral' => 'whyGoodReferral',
+            'cv_path' => 'cvPath',
+        );
     }
 }
 

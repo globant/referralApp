@@ -9,7 +9,7 @@ return 'CREATE TABLE IF NOT EXISTS `referral` (
     `eid` INT(11) NOT NULL,
     `country` VARCHAR(100) NOT NULL,
     `city` VARCHAR(100) NOT NULL,
-    `whyGoodReferral` VARCHAR(100),
+    `why_good_referral` VARCHAR(100),
     `cv_path` VARCHAR(100),
     PRIMARY KEY (`id`)
 );';
