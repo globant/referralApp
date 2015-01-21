@@ -31,10 +31,6 @@ $di->set('session', function() {
 
     return $session;
 });
-
- $di->set('modelsManager', function() {
-      return new Phalcon\Mvc\Model\Manager();
- });
  
 $tokens = array(
     'client_id' => '229737568035-t0isieq89rkd65av2uvebo4iu2jrju43.apps.googleusercontent.com',

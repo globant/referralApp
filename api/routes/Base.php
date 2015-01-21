@@ -26,7 +26,6 @@ class Base
         $this->response = $di->getShared('response');
         $this->session = $di->getShared('session');
         $this->config = $di->getShared('config');
-        $this->modelsManager = $di->getShared('modelsManager');
 
         $this->_init();
     }
