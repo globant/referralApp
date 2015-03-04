@@ -2,3 +2,5 @@
 /nbproject/private/
 .sass-cache
 api/config/config.ini
+files
+files/*

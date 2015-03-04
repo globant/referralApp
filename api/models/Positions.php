@@ -14,25 +14,29 @@ class Positions extends \Phalcon\Mvc\Model
      */
     public $name;
     /**
-     * @Column(type="string", length=48, nullable=false)
-     */
-    public $location;
-    /**
-     * @Column(type="string", length=24, nullable=false)
+     * @Column(type="integer", length=11, nullable=false)
      */
     public $seniority;
     /**
+     * @Column(type="integer", length=11, nullable=false)
+     */
+    public $location;    
+    /**
      * @Column(type="boolean", length=1, nullable=false)
      */
-    public $is_hot;
+    public $isHot;
 
+    public function initialize() {
+        $this->hasOne('location', 'Models\Location', 'id', array('alias' => 'Location'));
+        $this->hasOne('seniority', 'Models\Seniority', 'id', array('alias' => 'Seniority'));
+    }
     public function columnMap()
     {
         return array(
             'id' => 'id',
             'name' => 'name',
-            'location' => 'location',
-            'seniority' => 'seniority',
+            'lid' => 'location',
+            'sid' => 'seniority',
             'is_hot' => 'isHot',
         );
     }
